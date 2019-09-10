@@ -1,0 +1,2500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="main" nsURI="SE_Generator::main::main" startHeaderPosition="30" endHeaderPosition="83">
+    <input>
+      <takesTypesFrom href="http://www.eclipse.org/uml2/4.0.0/UML#/"/>
+    </input>
+    <imports href="../xml/GenerateXML.emtl#/0"/>
+    <imports href="../model/GenerateModel.emtl#/0"/>
+    <imports href="../basics/GenerateBasics.emtl#/0"/>
+    <imports href="../screenView/GenerateScreenView.emtl#/0"/>
+    <ownedModuleElement xsi:type="mtl:Template" name="mainClass" visibility="Public" main="true">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#xD;&#xA;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation" definition="/0/generateMainActivityWithMenuJava">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/mainClass/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/mainClass/%.1/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;&#x9;&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <definition href="../xml/GenerateXML.emtl#/0/generateXML"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/mainClass/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/mainClass/%.1/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;&#x9;&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <definition href="../basics/GenerateBasics.emtl#/0/generateBasics"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/mainClass/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/mainClass/%.1/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;&#x9;&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <definition href="../model/GenerateModel.emtl#/0/generateModel"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/mainClass/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/mainClass/%.1/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/equalsIgnoreCase">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/mainClass/%.1/s">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="appStart">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <definition href="../screenView/GenerateScreenView.emtl#/0/generateScreenView"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/mainClass/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/mainClass/%.1/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA; &#x9;&#x9;&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <definition href="../model/GenerateModel.emtl#/0/generateModel"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/mainClass/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/mainClass/%.1/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/equalsIgnoreCase">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/mainClass/%.1/s">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="mapListSwitcherView">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <definition href="../screenView/GenerateScreenView.emtl#/0/generateScreenView"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/mainClass/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/mainClass/%.1/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;&#x9;&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <definition href="../model/GenerateModel.emtl#/0/generateModel"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/mainClass/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/mainClass/%.1/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/equalsIgnoreCase">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/mainClass/%.1/s">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="photoGalleryView">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <definition href="../screenView/GenerateScreenView.emtl#/0/generateScreenView"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/mainClass/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/mainClass/%.1/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/equalsIgnoreCase">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/mainClass/%.1/s">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="webpageView">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <definition href="../screenView/GenerateScreenView.emtl#/0/generateScreenView"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/mainClass/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/mainClass/%.1/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+          <ifExpr xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/equalsIgnoreCase">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/mainClass/%.1/s">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="customScreen">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#xD;&#xA;"/>
+        <loopVariable name="s">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:OperationCallExp" eType="/6/Set(Stereotype)">
+          <source xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/mainClass/aClass">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/uml2/4.0.0/UML#//Element/getAppliedStereotypes"/>
+        </iterSet>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+      <parameter name="aClass">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="isSpecificMenu" visibility="Public">
+      <parameter name="aClass">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+      </parameter>
+      <parameter name="s">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+      </parameter>
+      <parameter name="str">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/equalsIgnoreCase">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//EnumerationLiteral"/>
+            <source xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/isSpecificMenu/aClass">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+              </source>
+              <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/isSpecificMenu/s">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+              </argument>
+              <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="menuType">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/uml2/4.0.0/UML#//Element/getValue"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/28/EnumerationLiteral">
+              <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//EnumerationLiteral"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+        </source>
+        <argument xsi:type="ocl.ecore:VariableExp" name="str" referredVariable="/0/isSpecificMenu/str">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+      </expression>
+      <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateMainActivityWithMenuJava" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="package com.ldag.se_application;&#xD;&#xA;&#xD;&#xA;import java.util.ArrayList;&#xD;&#xA;&#xD;&#xA;import com.ldag.se_application.R;&#xD;&#xA;&#xD;&#xA;import android.app.Activity;&#xD;&#xA;import android.app.Fragment;&#xD;&#xA;import android.app.FragmentManager;&#xD;&#xA;import android.content.res.Configuration;&#xD;&#xA;import android.content.res.TypedArray;&#xD;&#xA;import android.os.Bundle;&#xD;&#xA;import android.util.Log;&#xD;&#xA;import android.view.Menu;&#xD;&#xA;import android.view.MenuItem;&#xD;&#xA;import android.view.View;&#xD;&#xA;import android.widget.AdapterView;&#xD;&#xA;import android.widget.ListView;&#xD;&#xA;&#xD;&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="import com.ldag.se_application.model.MenuEntry;&#xD;&#xA;import com.ldag.se_application.adapter.MenuEntryAdapter;&#xD;&#xA;import android.support.v4.app.ActionBarDrawerToggle;&#xD;&#xA;import android.support.v4.widget.DrawerLayout;&#xD;&#xA;"/>
+          <ifExpr xsi:type="mtl:QueryInvocation" definition="/0/isSpecificMenu">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateMainActivityWithMenuJava/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateMainActivityWithMenuJava/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="SliderMenu">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="import com.ldag.se_application.fragments."/>
+          <body xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/toUpperFirst">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateMainActivityWithMenuJava/%.1/%.3/p">
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+              </source>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Fragment;">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+          <loopVariable name="p">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(Property)">
+            <source xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateMainActivityWithMenuJava/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/uml2/4.0.0/UML#//StructuredClassifier/ownedAttribute"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &#x9;// tab menu items are not availavle in this version of the generator&#x9;&#xD;&#xA;"/>
+          <ifExpr xsi:type="mtl:QueryInvocation" definition="/0/isSpecificMenu">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateMainActivityWithMenuJava/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateMainActivityWithMenuJava/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="TabMenu">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;public class "/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateMainActivityWithMenuJava/aClass">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" extends Activity {&#xD;&#xA;&#xD;&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="    private DrawerLayout mDrawerLayout;&#xD;&#xA;    private ListView mDrawerList;&#xD;&#xA;    private ActionBarDrawerToggle mDrawerToggle;&#xD;&#xA; &#xD;&#xA;    // nav drawer title&#xD;&#xA;    private CharSequence mDrawerTitle;&#xD;&#xA;&#xD;&#xA;    private ArrayList&lt;MenuEntry> navDrawerItems;&#xD;&#xA;    private MenuEntryAdapter adapter;&#xD;&#xA;&#xD;&#xA;"/>
+          <ifExpr xsi:type="mtl:QueryInvocation" definition="/0/isSpecificMenu">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateMainActivityWithMenuJava/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateMainActivityWithMenuJava/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="SliderMenu">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="    // used to store app title&#xD;&#xA;    private CharSequence mTitle;&#xD;&#xA; &#xD;&#xA;    // slide menu items&#xD;&#xA;    private ArrayList&lt;String> navMenuTitles;&#xD;&#xA;    private TypedArray navMenuIcons;&#xD;&#xA; &#xD;&#xA; &#xD;&#xA;    @Override&#xD;&#xA;    protected void onCreate(Bundle savedInstanceState) {&#xD;&#xA;        super.onCreate(savedInstanceState);&#xD;&#xA;        setContentView(R.layout.activity_main);&#xD;&#xA; &#xD;&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &#x9;&#x9;        mTitle = mDrawerTitle = getTitle();&#xD;&#xA; &#xD;&#xA;        // load slide menu items&#xD;&#xA;        //navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);&#xD;&#xA; &#xD;&#xA;        // nav drawer icons from resources&#xD;&#xA;        navMenuIcons = getResources()&#xD;&#xA;                .obtainTypedArray(R.array.nav_drawer_icons);&#xD;&#xA; &#xD;&#xA;        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);&#xD;&#xA;        mDrawerList = (ListView) findViewById(R.id.list_slidermenu);&#xD;&#xA; &#xD;&#xA;        navDrawerItems = new ArrayList&lt;MenuEntry>();&#xD;&#xA; &#x9;    navMenuTitles = new ArrayList&lt;String>();&#xD;&#xA; &#xD;&#xA;"/>
+          <body xsi:type="mtl:ForBlock">
+            <body xsi:type="mtl:ForBlock">
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;navDrawerItems.add(new MenuEntry(&quot;"/>
+                <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/toUpperFirst">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/p">
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+                  </source>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, navMenuIcons.getResourceId(5, -1)));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;navMenuTitles.add(&quot;"/>
+                <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/toUpperFirst">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/p">
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+                  </source>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;);&#xD;&#xA;"/>
+                <ifExpr xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/equalsIgnoreCase">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/s">
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="CustomScreen">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  </argument>
+                </ifExpr>
+              </body>
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;navDrawerItems.add(new MenuEntry(&quot;"/>
+                <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/toUpperFirst">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/p">
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+                  </source>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, navMenuIcons.getResourceId(1, -1)));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;navMenuTitles.add(&quot;"/>
+                <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/toUpperFirst">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/p">
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+                  </source>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;);&#xD;&#xA;"/>
+                <ifExpr xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/equalsIgnoreCase">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/s">
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="MapListSwitcherView">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  </argument>
+                </ifExpr>
+              </body>
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;navDrawerItems.add(new MenuEntry(&quot;"/>
+                <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/toUpperFirst">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/p">
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+                  </source>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, navMenuIcons.getResourceId(3, -1)));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;navMenuTitles.add(&quot;"/>
+                <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/toUpperFirst">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/p">
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+                  </source>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;);&#xD;&#xA;"/>
+                <ifExpr xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/equalsIgnoreCase">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/s">
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="PhotoGalleryView">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  </argument>
+                </ifExpr>
+              </body>
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;navDrawerItems.add(new MenuEntry(&quot;"/>
+                <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/toUpperFirst">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/p">
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+                  </source>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, navMenuIcons.getResourceId(2, -1)));&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;navMenuTitles.add(&quot;"/>
+                <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/toUpperFirst">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/p">
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+                  </source>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;);&#xD;&#xA;"/>
+                <ifExpr xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/equalsIgnoreCase">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/s">
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="WebpageView">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  </argument>
+                </ifExpr>
+              </body>
+              <loopVariable name="s">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+              </loopVariable>
+              <iterSet xsi:type="ocl.ecore:OperationCallExp" eType="/6/Set(Stereotype)">
+                <source xsi:type="ocl.ecore:PropertyCallExp">
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Type"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/p">
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+                  </source>
+                  <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/uml2/4.0.0/UML#//TypedElement/type"/>
+                </source>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/uml2/4.0.0/UML#//Element/getAppliedStereotypes"/>
+              </iterSet>
+            </body>
+            <loopVariable name="p">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+            </loopVariable>
+            <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(Property)">
+              <source xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateMainActivityWithMenuJava/aClass">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/uml2/4.0.0/UML#//StructuredClassifier/ownedAttribute"/>
+            </iterSet>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="       &#xD;&#xA;        // Recycle the typed array&#xD;&#xA;        navMenuIcons.recycle();&#xD;&#xA; &#xD;&#xA;        mDrawerList.setOnItemClickListener(new SlideMenuClickListener());&#xD;&#xA; &#xD;&#xA;        // setting the nav drawer list adapter&#xD;&#xA;        adapter = new MenuEntryAdapter(getApplicationContext(),&#xD;&#xA;                navDrawerItems);&#xD;&#xA;        mDrawerList.setAdapter(adapter);&#xD;&#xA; &#xD;&#xA;        // enabling action bar app icon and behaving it as toggle button&#xD;&#xA;        getActionBar().setDisplayHomeAsUpEnabled(true);&#xD;&#xA;        getActionBar().setHomeButtonEnabled(true);&#xD;&#xA; &#xD;&#xA;        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,&#xD;&#xA;                R.drawable.ic_drawer, //nav menu toggle icon&#xD;&#xA;                R.string.app_name, // nav drawer open - description for accessibility&#xD;&#xA;                R.string.app_name // nav drawer close - description for accessibility&#xD;&#xA;        ) {&#xD;&#xA;            public void onDrawerClosed(View view) {&#xD;&#xA;                getActionBar().setTitle(mTitle);&#xD;&#xA;                // calling onPrepareOptionsMenu() to show action bar icons&#xD;&#xA;                invalidateOptionsMenu();&#xD;&#xA;            }&#xD;&#xA; &#xD;&#xA;            public void onDrawerOpened(View drawerView) {&#xD;&#xA;                getActionBar().setTitle(mDrawerTitle);&#xD;&#xA;                // calling onPrepareOptionsMenu() to hide action bar icons&#xD;&#xA;                invalidateOptionsMenu();&#xD;&#xA;            }&#xD;&#xA;        };&#xD;&#xA;        mDrawerLayout.setDrawerListener(mDrawerToggle);&#xD;&#xA; &#xD;&#xA;        if (savedInstanceState == null) {&#xD;&#xA;            // on first time display view for first nav item&#xD;&#xA;            displayView(0);&#xD;&#xA;        }&#xD;&#xA;&#xD;&#xA;"/>
+          <ifExpr xsi:type="mtl:QueryInvocation" definition="/0/isSpecificMenu">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateMainActivityWithMenuJava/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateMainActivityWithMenuJava/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="SliderMenu">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="    }&#xD;&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;    /**&#xD;&#xA;     * Slide menu item click listener&#xD;&#xA;     * */&#xD;&#xA;    private class SlideMenuClickListener implements&#xD;&#xA;            ListView.OnItemClickListener {&#xD;&#xA;        @Override&#xD;&#xA;        public void onItemClick(AdapterView&lt;?> parent, View view, int position,&#xD;&#xA;                long id) {&#xD;&#xA;            // display view for selected nav drawer item&#xD;&#xA;            displayView(position);&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA;"/>
+          <ifExpr xsi:type="mtl:QueryInvocation" definition="/0/isSpecificMenu">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateMainActivityWithMenuJava/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateMainActivityWithMenuJava/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="SliderMenu">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;    @Override&#xD;&#xA;    public boolean onCreateOptionsMenu(Menu menu) {&#xD;&#xA;        getMenuInflater().inflate(R.menu.main, menu);&#xD;&#xA;        return true;&#xD;&#xA;    }&#xD;&#xA; &#xD;&#xA;    @Override&#xD;&#xA;    public boolean onOptionsItemSelected(MenuItem item) {&#xD;&#xA;        // toggle nav drawer on selecting action bar app icon/title&#xD;&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="   &#x9;&#x9;if (mDrawerToggle.onOptionsItemSelected(item)) {&#xD;&#xA;            return true;&#xD;&#xA;        }&#xD;&#xA;"/>
+          <ifExpr xsi:type="mtl:QueryInvocation" definition="/0/isSpecificMenu">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateMainActivityWithMenuJava/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateMainActivityWithMenuJava/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="SliderMenu">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;        // Handle action bar actions click&#xD;&#xA;        switch (item.getItemId()) {&#xD;&#xA;        //case R.id.action_settings:&#xD;&#xA;          //  return true;&#xD;&#xA;        default:&#xD;&#xA;            return super.onOptionsItemSelected(item);&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA; &#xD;&#xA;    /***&#xD;&#xA;     * Called when invalidateOptionsMenu() is triggered&#xD;&#xA;     */&#xD;&#xA;    @Override&#xD;&#xA;    public boolean onPrepareOptionsMenu(Menu menu) {&#xD;&#xA;        // if nav drawer is opened, hide the action items&#xD;&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;//boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);&#xD;&#xA;        //menu.findItem(R.id.action_settings).setVisible(!drawerOpen);&#xD;&#xA;"/>
+          <ifExpr xsi:type="mtl:QueryInvocation" definition="/0/isSpecificMenu">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateMainActivityWithMenuJava/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateMainActivityWithMenuJava/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="SliderMenu">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="        return super.onPrepareOptionsMenu(menu);&#xD;&#xA;    }&#xD;&#xA;    &#xD;&#xA; &#xD;&#xA;    /**&#xD;&#xA;     * Diplaying fragment view for selected nav drawer list item&#xD;&#xA;     * */&#xD;&#xA;    private void displayView(int position) {&#xD;&#xA;        // update the main content by replacing fragments&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;MenuEntry me = navDrawerItems.get(position);&#xD;&#xA;    &#x9;   &#x9;&#xD;&#xA;    &#xD;&#xA;        Fragment fragment = null;&#xD;&#xA;&#xD;&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;if(me.getTitle().equalsIgnoreCase(&quot;"/>
+          <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/toUpperFirst">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateMainActivityWithMenuJava/%.1/%.19/p">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+            </source>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;)){&#xD;&#xA;&#x9;&#x9;&#x9;fragment = new "/>
+          <body xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/toUpperFirst">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="p" referredVariable="/0/generateMainActivityWithMenuJava/%.1/%.19/p">
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+              </source>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Fragment();">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;"/>
+          <loopVariable name="p">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/6/OrderedSet(Property)">
+            <source xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateMainActivityWithMenuJava/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.eclipse.org/uml2/4.0.0/UML#//StructuredClassifier/ownedAttribute"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &#xD;&#xA;        if (fragment != null) {&#xD;&#xA;            FragmentManager fragmentManager = getFragmentManager();&#xD;&#xA;            fragmentManager.beginTransaction()&#xD;&#xA;                    .replace(R.id.frame_container, fragment).commit();&#xD;&#xA; &#xD;&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="            // update selected item and title, then close the drawer&#xD;&#xA;            mDrawerList.setItemChecked(position, true);&#xD;&#xA;            mDrawerList.setSelection(position);&#xD;&#xA;            mDrawerLayout.closeDrawer(mDrawerList);&#xD;&#xA;"/>
+          <ifExpr xsi:type="mtl:QueryInvocation" definition="/0/isSpecificMenu">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateMainActivityWithMenuJava/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateMainActivityWithMenuJava/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="SliderMenu">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;setTitle(navMenuTitles.get(position));&#xD;&#xA;        } else {&#xD;&#xA;            // error in creating fragment&#xD;&#xA;            Log.e(&quot;MainActivity&quot;, &quot;Error in creating fragment&quot;);&#xD;&#xA;        }&#xD;&#xA;    }&#xD;&#xA; &#xD;&#xA;    @Override&#xD;&#xA;    public void setTitle(CharSequence title) {&#xD;&#xA;        mTitle = title;&#xD;&#xA;        getActionBar().setTitle(mTitle);&#xD;&#xA;    }&#xD;&#xA; &#xD;&#xA;    @Override&#xD;&#xA;    protected void onPostCreate(Bundle savedInstanceState) {&#xD;&#xA;        super.onPostCreate(savedInstanceState);&#xD;&#xA;        // Sync the toggle state after onRestoreInstanceState has occurred.&#xD;&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="   &#x9;&#x9; mDrawerToggle.syncState();&#xD;&#xA;"/>
+          <ifExpr xsi:type="mtl:QueryInvocation" definition="/0/isSpecificMenu">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateMainActivityWithMenuJava/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateMainActivityWithMenuJava/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="SliderMenu">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="    }&#xD;&#xA; &#xD;&#xA;    @Override&#xD;&#xA;    public void onConfigurationChanged(Configuration newConfig) {&#xD;&#xA;        super.onConfigurationChanged(newConfig);&#xD;&#xA;        // Pass any configuration change to the drawer toggls&#xD;&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="        mDrawerToggle.onConfigurationChanged(newConfig);&#xD;&#xA;"/>
+          <ifExpr xsi:type="mtl:QueryInvocation" definition="/0/isSpecificMenu">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateMainActivityWithMenuJava/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateMainActivityWithMenuJava/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="SliderMenu">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="    }&#xD;&#xA; &#xD;&#xA;}&#xD;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="src/com/ldag/se_application/">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </source>
+          <argument xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateMainActivityWithMenuJava/aClass">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".java">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+        </fileUrl>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;"/>
+      <parameter name="aClass">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+      </parameter>
+      <parameter name="s">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+      <eOperations name="toUpperFirst">
+        <eAnnotations source="MTL"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eOperations>
+      <eOperations name="equalsIgnoreCase">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <eParameters name="other">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="mainClass">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/mainClass"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="isSpecificMenu">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/isSpecificMenu"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+        </eParameters>
+        <eParameters name="s">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+        </eParameters>
+        <eParameters name="str">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateMainActivityWithMenuJava">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateMainActivityWithMenuJava"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+        </eParameters>
+        <eParameters name="s">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateXML">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../xml/GenerateXML.emtl#/0/generateXML"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+        </eParameters>
+        <eParameters name="s">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateModel">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../model/GenerateModel.emtl#/0/generateModel"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+        </eParameters>
+        <eParameters name="s">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateBasics">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../basics/GenerateBasics.emtl#/0/generateBasics"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+        </eParameters>
+        <eParameters name="s">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateScreenView">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../screenView/GenerateScreenView.emtl#/0/generateScreenView"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+        </eParameters>
+        <eParameters name="s">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Class_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(Stereotype)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Property)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="EnumerationLiteral">
+      <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//EnumerationLiteral"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Property"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/mainClass">
+      <details key="start" value="281"/>
+      <details key="end" value="1141"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/mainClass/%">
+      <details key="start" value="326"/>
+      <details key="end" value="329"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/mainClass/%.1">
+      <details key="start" value="349"/>
+      <details key="end" value="1126"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/mainClass/%.1/%">
+      <details key="start" value="404"/>
+      <details key="end" value="406"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/mainClass/%.1/%.1">
+      <details key="start" value="407"/>
+      <details key="end" value="622"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/mainClass/%.1/%.1/%">
+      <details key="start" value="449"/>
+      <details key="end" value="452"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/mainClass/%.1/%.1/%.1">
+      <details key="start" value="453"/>
+      <details key="end" value="496"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/mainClass/%.1/%.1/%.1/aClass">
+      <details key="start" value="486"/>
+      <details key="end" value="492"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/mainClass/%.1/%.1/%.1/s">
+      <details key="start" value="494"/>
+      <details key="end" value="495"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/mainClass/%.1/%.1/%.2">
+      <details key="start" value="498"/>
+      <details key="end" value="503"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/mainClass/%.1/%.1/%.3">
+      <details key="start" value="504"/>
+      <details key="end" value="533"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/mainClass/%.1/%.1/%.3/aClass">
+      <details key="start" value="523"/>
+      <details key="end" value="529"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/mainClass/%.1/%.1/%.3/s">
+      <details key="start" value="531"/>
+      <details key="end" value="532"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/mainClass/%.1/%.1/%.4">
+      <details key="start" value="535"/>
+      <details key="end" value="540"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/mainClass/%.1/%.1/%.5">
+      <details key="start" value="541"/>
+      <details key="end" value="573"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/mainClass/%.1/%.1/%.5/aClass">
+      <details key="start" value="563"/>
+      <details key="end" value="569"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/mainClass/%.1/%.1/%.5/s">
+      <details key="start" value="571"/>
+      <details key="end" value="572"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/mainClass/%.1/%.1/%.6">
+      <details key="start" value="575"/>
+      <details key="end" value="580"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/mainClass/%.1/%.1/%.7">
+      <details key="start" value="581"/>
+      <details key="end" value="612"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/mainClass/%.1/%.1/%.7/aClass">
+      <details key="start" value="602"/>
+      <details key="end" value="608"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/mainClass/%.1/%.1/%.7/s">
+      <details key="start" value="610"/>
+      <details key="end" value="611"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/mainClass/%.1/%.1/%.8">
+      <details key="start" value="614"/>
+      <details key="end" value="616"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/mainClass/%.1/%.1/%.9">
+      <details key="start" value="411"/>
+      <details key="end" value="446"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/mainClass/%.1/%.1/%.9/%">
+      <details key="start" value="411"/>
+      <details key="end" value="417"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/mainClass/%.1/%.1/%.9/%/s">
+      <details key="start" value="411"/>
+      <details key="end" value="412"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/mainClass/%.1/%.1/%.9/%.1">
+      <details key="start" value="435"/>
+      <details key="end" value="445"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/mainClass/%.1/%.2">
+      <details key="start" value="624"/>
+      <details key="end" value="626"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/mainClass/%.1/%.3">
+      <details key="start" value="627"/>
+      <details key="end" value="770"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/mainClass/%.1/%.3/%">
+      <details key="start" value="680"/>
+      <details key="end" value="683"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/mainClass/%.1/%.3/%.1">
+      <details key="start" value="684"/>
+      <details key="end" value="720"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/mainClass/%.1/%.3/%.1/aClass">
+      <details key="start" value="710"/>
+      <details key="end" value="716"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/mainClass/%.1/%.3/%.1/s">
+      <details key="start" value="718"/>
+      <details key="end" value="719"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/mainClass/%.1/%.3/%.2">
+      <details key="start" value="722"/>
+      <details key="end" value="728"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/mainClass/%.1/%.3/%.3">
+      <details key="start" value="729"/>
+      <details key="end" value="760"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/mainClass/%.1/%.3/%.3/aClass">
+      <details key="start" value="750"/>
+      <details key="end" value="756"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/mainClass/%.1/%.3/%.3/s">
+      <details key="start" value="758"/>
+      <details key="end" value="759"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/mainClass/%.1/%.3/%.4">
+      <details key="start" value="762"/>
+      <details key="end" value="764"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/mainClass/%.1/%.3/%.5">
+      <details key="start" value="631"/>
+      <details key="end" value="677"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/mainClass/%.1/%.3/%.5/%">
+      <details key="start" value="631"/>
+      <details key="end" value="637"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/mainClass/%.1/%.3/%.5/%/s">
+      <details key="start" value="631"/>
+      <details key="end" value="632"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/mainClass/%.1/%.3/%.5/%.1">
+      <details key="start" value="655"/>
+      <details key="end" value="676"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/mainClass/%.1/%.4">
+      <details key="start" value="772"/>
+      <details key="end" value="774"/>
+      <details key="line" value="24"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/mainClass/%.1/%.5">
+      <details key="start" value="775"/>
+      <details key="end" value="914"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/mainClass/%.1/%.5/%">
+      <details key="start" value="825"/>
+      <details key="end" value="828"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/mainClass/%.1/%.5/%.1">
+      <details key="start" value="829"/>
+      <details key="end" value="865"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/mainClass/%.1/%.5/%.1/aClass">
+      <details key="start" value="855"/>
+      <details key="end" value="861"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/mainClass/%.1/%.5/%.1/s">
+      <details key="start" value="863"/>
+      <details key="end" value="864"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/mainClass/%.1/%.5/%.2">
+      <details key="start" value="867"/>
+      <details key="end" value="872"/>
+      <details key="line" value="27"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/mainClass/%.1/%.5/%.3">
+      <details key="start" value="873"/>
+      <details key="end" value="904"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/mainClass/%.1/%.5/%.3/aClass">
+      <details key="start" value="894"/>
+      <details key="end" value="900"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/mainClass/%.1/%.5/%.3/s">
+      <details key="start" value="902"/>
+      <details key="end" value="903"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/mainClass/%.1/%.5/%.4">
+      <details key="start" value="906"/>
+      <details key="end" value="908"/>
+      <details key="line" value="28"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/mainClass/%.1/%.5/%.5">
+      <details key="start" value="779"/>
+      <details key="end" value="822"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/mainClass/%.1/%.5/%.5/%">
+      <details key="start" value="779"/>
+      <details key="end" value="785"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/mainClass/%.1/%.5/%.5/%/s">
+      <details key="start" value="779"/>
+      <details key="end" value="780"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/mainClass/%.1/%.5/%.5/%.1">
+      <details key="start" value="803"/>
+      <details key="end" value="821"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/mainClass/%.1/%.6">
+      <details key="start" value="916"/>
+      <details key="end" value="918"/>
+      <details key="line" value="29"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/mainClass/%.1/%.7">
+      <details key="start" value="919"/>
+      <details key="end" value="1014"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/mainClass/%.1/%.7/%">
+      <details key="start" value="964"/>
+      <details key="end" value="967"/>
+      <details key="line" value="31"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/mainClass/%.1/%.7/%.1">
+      <details key="start" value="968"/>
+      <details key="end" value="1004"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/mainClass/%.1/%.7/%.1/aClass">
+      <details key="start" value="994"/>
+      <details key="end" value="1000"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/mainClass/%.1/%.7/%.1/s">
+      <details key="start" value="1002"/>
+      <details key="end" value="1003"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/mainClass/%.1/%.7/%.2">
+      <details key="start" value="1006"/>
+      <details key="end" value="1008"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/mainClass/%.1/%.7/%.3">
+      <details key="start" value="923"/>
+      <details key="end" value="961"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/mainClass/%.1/%.7/%.3/%">
+      <details key="start" value="923"/>
+      <details key="end" value="929"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/mainClass/%.1/%.7/%.3/%/s">
+      <details key="start" value="923"/>
+      <details key="end" value="924"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/mainClass/%.1/%.7/%.3/%.1">
+      <details key="start" value="947"/>
+      <details key="end" value="960"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/mainClass/%.1/%.8">
+      <details key="start" value="1016"/>
+      <details key="end" value="1018"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/mainClass/%.1/%.9">
+      <details key="start" value="1019"/>
+      <details key="end" value="1115"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/mainClass/%.1/%.9/%">
+      <details key="start" value="1065"/>
+      <details key="end" value="1068"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/mainClass/%.1/%.9/%.1">
+      <details key="start" value="1069"/>
+      <details key="end" value="1105"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/mainClass/%.1/%.9/%.1/aClass">
+      <details key="start" value="1095"/>
+      <details key="end" value="1101"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/mainClass/%.1/%.9/%.1/s">
+      <details key="start" value="1103"/>
+      <details key="end" value="1104"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/mainClass/%.1/%.9/%.2">
+      <details key="start" value="1107"/>
+      <details key="end" value="1109"/>
+      <details key="line" value="36"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/mainClass/%.1/%.9/%.3">
+      <details key="start" value="1023"/>
+      <details key="end" value="1062"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/mainClass/%.1/%.9/%.3/%">
+      <details key="start" value="1023"/>
+      <details key="end" value="1029"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/mainClass/%.1/%.9/%.3/%/s">
+      <details key="start" value="1023"/>
+      <details key="end" value="1024"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/mainClass/%.1/%.9/%.3/%.1">
+      <details key="start" value="1047"/>
+      <details key="end" value="1061"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/mainClass/%.1/%.10">
+      <details key="start" value="1117"/>
+      <details key="end" value="1120"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/mainClass/%.1/s">
+      <details key="start" value="355"/>
+      <details key="end" value="367"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/mainClass/%.1/%.11">
+      <details key="start" value="370"/>
+      <details key="end" value="400"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/mainClass/%.1/%.11/aClass">
+      <details key="start" value="370"/>
+      <details key="end" value="376"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/mainClass/%.2">
+      <details key="start" value="1128"/>
+      <details key="end" value="1130"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/mainClass/aClass">
+      <details key="start" value="308"/>
+      <details key="end" value="322"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/isSpecificMenu">
+      <details key="start" value="1145"/>
+      <details key="end" value="1320"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/isSpecificMenu/aClass">
+      <details key="start" value="1174"/>
+      <details key="end" value="1188"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/isSpecificMenu/s">
+      <details key="start" value="1190"/>
+      <details key="end" value="1204"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/isSpecificMenu/str">
+      <details key="start" value="1206"/>
+      <details key="end" value="1218"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/isSpecificMenu/%">
+      <details key="start" value="1231"/>
+      <details key="end" value="1318"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/isSpecificMenu/%/%">
+      <details key="start" value="1231"/>
+      <details key="end" value="1296"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/isSpecificMenu/%/%/%">
+      <details key="start" value="1231"/>
+      <details key="end" value="1291"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/isSpecificMenu/%/%/%/%">
+      <details key="start" value="1231"/>
+      <details key="end" value="1261"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/isSpecificMenu/%/%/%/%/aClass">
+      <details key="start" value="1231"/>
+      <details key="end" value="1237"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/isSpecificMenu/%/%/%/%/s">
+      <details key="start" value="1247"/>
+      <details key="end" value="1248"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.94" references="/0/isSpecificMenu/%/%/%/%/%">
+      <details key="start" value="1250"/>
+      <details key="end" value="1260"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/isSpecificMenu/%/%/%/%.1">
+      <details key="start" value="1272"/>
+      <details key="end" value="1290"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/isSpecificMenu/%/str">
+      <details key="start" value="1314"/>
+      <details key="end" value="1317"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/generateMainActivityWithMenuJava">
+      <details key="start" value="1324"/>
+      <details key="end" value="10118"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.98" references="/0/generateMainActivityWithMenuJava/%">
+      <details key="start" value="1408"/>
+      <details key="end" value="1410"/>
+      <details key="line" value="45"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/generateMainActivityWithMenuJava/%.1">
+      <details key="start" value="1411"/>
+      <details key="end" value="10101"/>
+      <details key="line" value="46"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/generateMainActivityWithMenuJava/%.1/%">
+      <details key="start" value="1499"/>
+      <details key="end" value="1992"/>
+      <details key="line" value="47"/>
+    </eAnnotations>
+    <eAnnotations source="positions.101" references="/0/generateMainActivityWithMenuJava/%.1/%.1">
+      <details key="start" value="1992"/>
+      <details key="end" value="2254"/>
+      <details key="line" value="66"/>
+    </eAnnotations>
+    <eAnnotations source="positions.102" references="/0/generateMainActivityWithMenuJava/%.1/%.1/%">
+      <details key="start" value="2040"/>
+      <details key="end" value="2249"/>
+      <details key="line" value="67"/>
+    </eAnnotations>
+    <eAnnotations source="positions.103" references="/0/generateMainActivityWithMenuJava/%.1/%.1/%.1">
+      <details key="start" value="1996"/>
+      <details key="end" value="2037"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.104" references="/0/generateMainActivityWithMenuJava/%.1/%.1/%.1/aClass">
+      <details key="start" value="2012"/>
+      <details key="end" value="2018"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.105" references="/0/generateMainActivityWithMenuJava/%.1/%.1/%.1/s">
+      <details key="start" value="2020"/>
+      <details key="end" value="2021"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.106" references="/0/generateMainActivityWithMenuJava/%.1/%.1/%.1/%">
+      <details key="start" value="2023"/>
+      <details key="end" value="2035"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.107" references="/0/generateMainActivityWithMenuJava/%.1/%.2">
+      <details key="start" value="2256"/>
+      <details key="end" value="2258"/>
+      <details key="line" value="72"/>
+    </eAnnotations>
+    <eAnnotations source="positions.108" references="/0/generateMainActivityWithMenuJava/%.1/%.3">
+      <details key="start" value="2258"/>
+      <details key="end" value="2397"/>
+      <details key="line" value="73"/>
+    </eAnnotations>
+    <eAnnotations source="positions.109" references="/0/generateMainActivityWithMenuJava/%.1/%.3/%">
+      <details key="start" value="2304"/>
+      <details key="end" value="2345"/>
+      <details key="line" value="74"/>
+    </eAnnotations>
+    <eAnnotations source="positions.110" references="/0/generateMainActivityWithMenuJava/%.1/%.3/%.1">
+      <details key="start" value="2346"/>
+      <details key="end" value="2387"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/generateMainActivityWithMenuJava/%.1/%.3/%.1/%">
+      <details key="start" value="2346"/>
+      <details key="end" value="2367"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.112" references="/0/generateMainActivityWithMenuJava/%.1/%.3/%.1/%/%">
+      <details key="start" value="2346"/>
+      <details key="end" value="2352"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.113" references="/0/generateMainActivityWithMenuJava/%.1/%.3/%.1/%/%/p">
+      <details key="start" value="2346"/>
+      <details key="end" value="2347"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.114" references="/0/generateMainActivityWithMenuJava/%.1/%.3/%.1/%.1">
+      <details key="start" value="2375"/>
+      <details key="end" value="2386"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.115" references="/0/generateMainActivityWithMenuJava/%.1/%.3/%.2">
+      <details key="start" value="2389"/>
+      <details key="end" value="2391"/>
+      <details key="line" value="75"/>
+    </eAnnotations>
+    <eAnnotations source="positions.116" references="/0/generateMainActivityWithMenuJava/%.1/%.3/p">
+      <details key="start" value="2264"/>
+      <details key="end" value="2276"/>
+      <details key="line" value="73"/>
+    </eAnnotations>
+    <eAnnotations source="positions.117" references="/0/generateMainActivityWithMenuJava/%.1/%.3/%.3">
+      <details key="start" value="2279"/>
+      <details key="end" value="2300"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.118" references="/0/generateMainActivityWithMenuJava/%.1/%.3/%.3/aClass">
+      <details key="start" value="2279"/>
+      <details key="end" value="2285"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.119" references="/0/generateMainActivityWithMenuJava/%.1/%.4">
+      <details key="start" value="2407"/>
+      <details key="end" value="2409"/>
+      <details key="line" value="75"/>
+    </eAnnotations>
+    <eAnnotations source="positions.120" references="/0/generateMainActivityWithMenuJava/%.1/%.5">
+      <details key="start" value="2409"/>
+      <details key="end" value="2532"/>
+      <details key="line" value="77"/>
+    </eAnnotations>
+    <eAnnotations source="positions.121" references="/0/generateMainActivityWithMenuJava/%.1/%.5/%">
+      <details key="start" value="2454"/>
+      <details key="end" value="2527"/>
+      <details key="line" value="78"/>
+    </eAnnotations>
+    <eAnnotations source="positions.122" references="/0/generateMainActivityWithMenuJava/%.1/%.5/%.1">
+      <details key="start" value="2413"/>
+      <details key="end" value="2451"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.123" references="/0/generateMainActivityWithMenuJava/%.1/%.5/%.1/aClass">
+      <details key="start" value="2429"/>
+      <details key="end" value="2435"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.124" references="/0/generateMainActivityWithMenuJava/%.1/%.5/%.1/s">
+      <details key="start" value="2437"/>
+      <details key="end" value="2438"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.125" references="/0/generateMainActivityWithMenuJava/%.1/%.5/%.1/%">
+      <details key="start" value="2440"/>
+      <details key="end" value="2449"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.126" references="/0/generateMainActivityWithMenuJava/%.1/%.6">
+      <details key="start" value="2534"/>
+      <details key="end" value="2549"/>
+      <details key="line" value="80"/>
+    </eAnnotations>
+    <eAnnotations source="positions.127" references="/0/generateMainActivityWithMenuJava/%.1/%.7">
+      <details key="start" value="2550"/>
+      <details key="end" value="2561"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.128" references="/0/generateMainActivityWithMenuJava/%.1/%.7/aClass">
+      <details key="start" value="2550"/>
+      <details key="end" value="2556"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.129" references="/0/generateMainActivityWithMenuJava/%.1/%.8">
+      <details key="start" value="2563"/>
+      <details key="end" value="2586"/>
+      <details key="line" value="81"/>
+    </eAnnotations>
+    <eAnnotations source="positions.130" references="/0/generateMainActivityWithMenuJava/%.1/%.9">
+      <details key="start" value="2587"/>
+      <details key="end" value="2929"/>
+      <details key="line" value="83"/>
+    </eAnnotations>
+    <eAnnotations source="positions.131" references="/0/generateMainActivityWithMenuJava/%.1/%.9/%">
+      <details key="start" value="2636"/>
+      <details key="end" value="2923"/>
+      <details key="line" value="83"/>
+    </eAnnotations>
+    <eAnnotations source="positions.132" references="/0/generateMainActivityWithMenuJava/%.1/%.9/%.1">
+      <details key="start" value="2591"/>
+      <details key="end" value="2632"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.133" references="/0/generateMainActivityWithMenuJava/%.1/%.9/%.1/aClass">
+      <details key="start" value="2607"/>
+      <details key="end" value="2613"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.134" references="/0/generateMainActivityWithMenuJava/%.1/%.9/%.1/s">
+      <details key="start" value="2615"/>
+      <details key="end" value="2616"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.135" references="/0/generateMainActivityWithMenuJava/%.1/%.9/%.1/%">
+      <details key="start" value="2618"/>
+      <details key="end" value="2630"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.136" references="/0/generateMainActivityWithMenuJava/%.1/%.10">
+      <details key="start" value="2932"/>
+      <details key="end" value="3286"/>
+      <details key="line" value="94"/>
+    </eAnnotations>
+    <eAnnotations source="positions.137" references="/0/generateMainActivityWithMenuJava/%.1/%.11">
+      <details key="start" value="3288"/>
+      <details key="end" value="6495"/>
+      <details key="line" value="108"/>
+    </eAnnotations>
+    <eAnnotations source="positions.138" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%">
+      <details key="start" value="3336"/>
+      <details key="end" value="3908"/>
+      <details key="line" value="109"/>
+    </eAnnotations>
+    <eAnnotations source="positions.139" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1">
+      <details key="start" value="3911"/>
+      <details key="end" value="4922"/>
+      <details key="line" value="124"/>
+    </eAnnotations>
+    <eAnnotations source="positions.140" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%">
+      <details key="start" value="3961"/>
+      <details key="end" value="4912"/>
+      <details key="line" value="125"/>
+    </eAnnotations>
+    <eAnnotations source="positions.141" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%">
+      <details key="start" value="4021"/>
+      <details key="end" value="4233"/>
+      <details key="line" value="126"/>
+    </eAnnotations>
+    <eAnnotations source="positions.142" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%/%">
+      <details key="start" value="4069"/>
+      <details key="end" value="4105"/>
+      <details key="line" value="127"/>
+    </eAnnotations>
+    <eAnnotations source="positions.143" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%/%.1">
+      <details key="start" value="4106"/>
+      <details key="end" value="4127"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.144" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%/%.1/%">
+      <details key="start" value="4106"/>
+      <details key="end" value="4112"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.145" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%/%.1/%/p">
+      <details key="start" value="4106"/>
+      <details key="end" value="4107"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.146" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%/%.2">
+      <details key="start" value="4129"/>
+      <details key="end" value="4194"/>
+      <details key="line" value="127"/>
+    </eAnnotations>
+    <eAnnotations source="positions.147" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%/%.3">
+      <details key="start" value="4195"/>
+      <details key="end" value="4216"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.148" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%/%.3/%">
+      <details key="start" value="4195"/>
+      <details key="end" value="4201"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.149" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%/%.3/%/p">
+      <details key="start" value="4195"/>
+      <details key="end" value="4196"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.150" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%/%.4">
+      <details key="start" value="4218"/>
+      <details key="end" value="4223"/>
+      <details key="line" value="128"/>
+    </eAnnotations>
+    <eAnnotations source="positions.151" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%/%.5">
+      <details key="start" value="4025"/>
+      <details key="end" value="4066"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.152" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%/%.5/%">
+      <details key="start" value="4026"/>
+      <details key="end" value="4032"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.153" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%/%.5/%/s">
+      <details key="start" value="4026"/>
+      <details key="end" value="4027"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.154" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%/%.5/%.1">
+      <details key="start" value="4050"/>
+      <details key="end" value="4064"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.155" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.1">
+      <details key="start" value="4240"/>
+      <details key="end" value="4459"/>
+      <details key="line" value="130"/>
+    </eAnnotations>
+    <eAnnotations source="positions.156" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.1/%">
+      <details key="start" value="4295"/>
+      <details key="end" value="4331"/>
+      <details key="line" value="131"/>
+    </eAnnotations>
+    <eAnnotations source="positions.157" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.1/%.1">
+      <details key="start" value="4332"/>
+      <details key="end" value="4353"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.158" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.1/%.1/%">
+      <details key="start" value="4332"/>
+      <details key="end" value="4338"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.159" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.1/%.1/%/p">
+      <details key="start" value="4332"/>
+      <details key="end" value="4333"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.160" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.1/%.2">
+      <details key="start" value="4355"/>
+      <details key="end" value="4420"/>
+      <details key="line" value="131"/>
+    </eAnnotations>
+    <eAnnotations source="positions.161" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.1/%.3">
+      <details key="start" value="4421"/>
+      <details key="end" value="4442"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.162" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.1/%.3/%">
+      <details key="start" value="4421"/>
+      <details key="end" value="4427"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.163" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.1/%.3/%/p">
+      <details key="start" value="4421"/>
+      <details key="end" value="4422"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.164" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.1/%.4">
+      <details key="start" value="4444"/>
+      <details key="end" value="4449"/>
+      <details key="line" value="132"/>
+    </eAnnotations>
+    <eAnnotations source="positions.165" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.1/%.5">
+      <details key="start" value="4244"/>
+      <details key="end" value="4292"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.166" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.1/%.5/%">
+      <details key="start" value="4245"/>
+      <details key="end" value="4251"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.167" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.1/%.5/%/s">
+      <details key="start" value="4245"/>
+      <details key="end" value="4246"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.168" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.1/%.5/%.1">
+      <details key="start" value="4269"/>
+      <details key="end" value="4290"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.169" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.2">
+      <details key="start" value="4466"/>
+      <details key="end" value="4682"/>
+      <details key="line" value="134"/>
+    </eAnnotations>
+    <eAnnotations source="positions.170" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.2/%">
+      <details key="start" value="4518"/>
+      <details key="end" value="4554"/>
+      <details key="line" value="135"/>
+    </eAnnotations>
+    <eAnnotations source="positions.171" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.2/%.1">
+      <details key="start" value="4555"/>
+      <details key="end" value="4576"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.172" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.2/%.1/%">
+      <details key="start" value="4555"/>
+      <details key="end" value="4561"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.173" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.2/%.1/%/p">
+      <details key="start" value="4555"/>
+      <details key="end" value="4556"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.174" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.2/%.2">
+      <details key="start" value="4578"/>
+      <details key="end" value="4643"/>
+      <details key="line" value="135"/>
+    </eAnnotations>
+    <eAnnotations source="positions.175" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.2/%.3">
+      <details key="start" value="4644"/>
+      <details key="end" value="4665"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.176" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.2/%.3/%">
+      <details key="start" value="4644"/>
+      <details key="end" value="4650"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.177" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.2/%.3/%/p">
+      <details key="start" value="4644"/>
+      <details key="end" value="4645"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.178" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.2/%.4">
+      <details key="start" value="4667"/>
+      <details key="end" value="4672"/>
+      <details key="line" value="136"/>
+    </eAnnotations>
+    <eAnnotations source="positions.179" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.2/%.5">
+      <details key="start" value="4470"/>
+      <details key="end" value="4515"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.180" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.2/%.5/%">
+      <details key="start" value="4471"/>
+      <details key="end" value="4477"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.181" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.2/%.5/%/s">
+      <details key="start" value="4471"/>
+      <details key="end" value="4472"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.182" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.2/%.5/%.1">
+      <details key="start" value="4495"/>
+      <details key="end" value="4513"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.183" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.3">
+      <details key="start" value="4689"/>
+      <details key="end" value="4900"/>
+      <details key="line" value="138"/>
+    </eAnnotations>
+    <eAnnotations source="positions.184" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.3/%">
+      <details key="start" value="4736"/>
+      <details key="end" value="4772"/>
+      <details key="line" value="139"/>
+    </eAnnotations>
+    <eAnnotations source="positions.185" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.3/%.1">
+      <details key="start" value="4773"/>
+      <details key="end" value="4794"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.186" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.3/%.1/%">
+      <details key="start" value="4773"/>
+      <details key="end" value="4779"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.187" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.3/%.1/%/p">
+      <details key="start" value="4773"/>
+      <details key="end" value="4774"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.188" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.3/%.2">
+      <details key="start" value="4796"/>
+      <details key="end" value="4861"/>
+      <details key="line" value="139"/>
+    </eAnnotations>
+    <eAnnotations source="positions.189" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.3/%.3">
+      <details key="start" value="4862"/>
+      <details key="end" value="4883"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.190" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.3/%.3/%">
+      <details key="start" value="4862"/>
+      <details key="end" value="4868"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.191" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.3/%.3/%/p">
+      <details key="start" value="4862"/>
+      <details key="end" value="4863"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.192" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.3/%.4">
+      <details key="start" value="4885"/>
+      <details key="end" value="4890"/>
+      <details key="line" value="140"/>
+    </eAnnotations>
+    <eAnnotations source="positions.193" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.3/%.5">
+      <details key="start" value="4693"/>
+      <details key="end" value="4733"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.194" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.3/%.5/%">
+      <details key="start" value="4694"/>
+      <details key="end" value="4700"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.195" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.3/%.5/%/s">
+      <details key="start" value="4694"/>
+      <details key="end" value="4695"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.196" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.3/%.5/%.1">
+      <details key="start" value="4718"/>
+      <details key="end" value="4731"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.197" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/s">
+      <details key="start" value="3967"/>
+      <details key="end" value="3979"/>
+      <details key="line" value="125"/>
+    </eAnnotations>
+    <eAnnotations source="positions.198" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.4">
+      <details key="start" value="3982"/>
+      <details key="end" value="4012"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.199" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.4/%">
+      <details key="start" value="3982"/>
+      <details key="end" value="3988"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.200" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%/%.4/%/p">
+      <details key="start" value="3982"/>
+      <details key="end" value="3983"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.201" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/p">
+      <details key="start" value="3917"/>
+      <details key="end" value="3929"/>
+      <details key="line" value="124"/>
+    </eAnnotations>
+    <eAnnotations source="positions.202" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%.1">
+      <details key="start" value="3932"/>
+      <details key="end" value="3953"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.203" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.1/%.1/aClass">
+      <details key="start" value="3932"/>
+      <details key="end" value="3938"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.204" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.2">
+      <details key="start" value="4924"/>
+      <details key="end" value="6488"/>
+      <details key="line" value="144"/>
+    </eAnnotations>
+    <eAnnotations source="positions.205" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.3">
+      <details key="start" value="3292"/>
+      <details key="end" value="3333"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.206" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.3/aClass">
+      <details key="start" value="3308"/>
+      <details key="end" value="3314"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.207" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.3/s">
+      <details key="start" value="3316"/>
+      <details key="end" value="3317"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.208" references="/0/generateMainActivityWithMenuJava/%.1/%.11/%.3/%">
+      <details key="start" value="3319"/>
+      <details key="end" value="3331"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.209" references="/0/generateMainActivityWithMenuJava/%.1/%.12">
+      <details key="start" value="6497"/>
+      <details key="end" value="6504"/>
+      <details key="line" value="184"/>
+    </eAnnotations>
+    <eAnnotations source="positions.210" references="/0/generateMainActivityWithMenuJava/%.1/%.13">
+      <details key="start" value="6507"/>
+      <details key="end" value="6961"/>
+      <details key="line" value="185"/>
+    </eAnnotations>
+    <eAnnotations source="positions.211" references="/0/generateMainActivityWithMenuJava/%.1/%.13/%">
+      <details key="start" value="6555"/>
+      <details key="end" value="6953"/>
+      <details key="line" value="186"/>
+    </eAnnotations>
+    <eAnnotations source="positions.212" references="/0/generateMainActivityWithMenuJava/%.1/%.13/%.1">
+      <details key="start" value="6511"/>
+      <details key="end" value="6552"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.213" references="/0/generateMainActivityWithMenuJava/%.1/%.13/%.1/aClass">
+      <details key="start" value="6527"/>
+      <details key="end" value="6533"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.214" references="/0/generateMainActivityWithMenuJava/%.1/%.13/%.1/s">
+      <details key="start" value="6535"/>
+      <details key="end" value="6536"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.215" references="/0/generateMainActivityWithMenuJava/%.1/%.13/%.1/%">
+      <details key="start" value="6538"/>
+      <details key="end" value="6550"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.216" references="/0/generateMainActivityWithMenuJava/%.1/%.14">
+      <details key="start" value="6963"/>
+      <details key="end" value="7263"/>
+      <details key="line" value="200"/>
+    </eAnnotations>
+    <eAnnotations source="positions.217" references="/0/generateMainActivityWithMenuJava/%.1/%.15">
+      <details key="start" value="7265"/>
+      <details key="end" value="7412"/>
+      <details key="line" value="210"/>
+    </eAnnotations>
+    <eAnnotations source="positions.218" references="/0/generateMainActivityWithMenuJava/%.1/%.15/%">
+      <details key="start" value="7313"/>
+      <details key="end" value="7405"/>
+      <details key="line" value="211"/>
+    </eAnnotations>
+    <eAnnotations source="positions.219" references="/0/generateMainActivityWithMenuJava/%.1/%.15/%.1">
+      <details key="start" value="7269"/>
+      <details key="end" value="7310"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.220" references="/0/generateMainActivityWithMenuJava/%.1/%.15/%.1/aClass">
+      <details key="start" value="7285"/>
+      <details key="end" value="7291"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.221" references="/0/generateMainActivityWithMenuJava/%.1/%.15/%.1/s">
+      <details key="start" value="7293"/>
+      <details key="end" value="7294"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.222" references="/0/generateMainActivityWithMenuJava/%.1/%.15/%.1/%">
+      <details key="start" value="7296"/>
+      <details key="end" value="7308"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.223" references="/0/generateMainActivityWithMenuJava/%.1/%.16">
+      <details key="start" value="7414"/>
+      <details key="end" value="7861"/>
+      <details key="line" value="215"/>
+    </eAnnotations>
+    <eAnnotations source="positions.224" references="/0/generateMainActivityWithMenuJava/%.1/%.17">
+      <details key="start" value="7863"/>
+      <details key="end" value="8057"/>
+      <details key="line" value="231"/>
+    </eAnnotations>
+    <eAnnotations source="positions.225" references="/0/generateMainActivityWithMenuJava/%.1/%.17/%">
+      <details key="start" value="7911"/>
+      <details key="end" value="8050"/>
+      <details key="line" value="232"/>
+    </eAnnotations>
+    <eAnnotations source="positions.226" references="/0/generateMainActivityWithMenuJava/%.1/%.17/%.1">
+      <details key="start" value="7867"/>
+      <details key="end" value="7908"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.227" references="/0/generateMainActivityWithMenuJava/%.1/%.17/%.1/aClass">
+      <details key="start" value="7883"/>
+      <details key="end" value="7889"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.228" references="/0/generateMainActivityWithMenuJava/%.1/%.17/%.1/s">
+      <details key="start" value="7891"/>
+      <details key="end" value="7892"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.229" references="/0/generateMainActivityWithMenuJava/%.1/%.17/%.1/%">
+      <details key="start" value="7894"/>
+      <details key="end" value="7906"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.230" references="/0/generateMainActivityWithMenuJava/%.1/%.18">
+      <details key="start" value="8059"/>
+      <details key="end" value="8420"/>
+      <details key="line" value="235"/>
+    </eAnnotations>
+    <eAnnotations source="positions.231" references="/0/generateMainActivityWithMenuJava/%.1/%.19">
+      <details key="start" value="8422"/>
+      <details key="end" value="8614"/>
+      <details key="line" value="250"/>
+    </eAnnotations>
+    <eAnnotations source="positions.232" references="/0/generateMainActivityWithMenuJava/%.1/%.19/%">
+      <details key="start" value="8468"/>
+      <details key="end" value="8505"/>
+      <details key="line" value="251"/>
+    </eAnnotations>
+    <eAnnotations source="positions.233" references="/0/generateMainActivityWithMenuJava/%.1/%.19/%.1">
+      <details key="start" value="8506"/>
+      <details key="end" value="8527"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.234" references="/0/generateMainActivityWithMenuJava/%.1/%.19/%.1/%">
+      <details key="start" value="8506"/>
+      <details key="end" value="8512"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.235" references="/0/generateMainActivityWithMenuJava/%.1/%.19/%.1/%/p">
+      <details key="start" value="8506"/>
+      <details key="end" value="8507"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.236" references="/0/generateMainActivityWithMenuJava/%.1/%.19/%.2">
+      <details key="start" value="8529"/>
+      <details key="end" value="8553"/>
+      <details key="line" value="251"/>
+    </eAnnotations>
+    <eAnnotations source="positions.237" references="/0/generateMainActivityWithMenuJava/%.1/%.19/%.3">
+      <details key="start" value="8554"/>
+      <details key="end" value="8597"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.238" references="/0/generateMainActivityWithMenuJava/%.1/%.19/%.3/%">
+      <details key="start" value="8554"/>
+      <details key="end" value="8575"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.239" references="/0/generateMainActivityWithMenuJava/%.1/%.19/%.3/%/%">
+      <details key="start" value="8554"/>
+      <details key="end" value="8560"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.240" references="/0/generateMainActivityWithMenuJava/%.1/%.19/%.3/%/%/p">
+      <details key="start" value="8554"/>
+      <details key="end" value="8555"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.241" references="/0/generateMainActivityWithMenuJava/%.1/%.19/%.3/%.1">
+      <details key="start" value="8583"/>
+      <details key="end" value="8596"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.242" references="/0/generateMainActivityWithMenuJava/%.1/%.19/%.4">
+      <details key="start" value="8599"/>
+      <details key="end" value="8606"/>
+      <details key="line" value="253"/>
+    </eAnnotations>
+    <eAnnotations source="positions.243" references="/0/generateMainActivityWithMenuJava/%.1/%.19/p">
+      <details key="start" value="8428"/>
+      <details key="end" value="8440"/>
+      <details key="line" value="250"/>
+    </eAnnotations>
+    <eAnnotations source="positions.244" references="/0/generateMainActivityWithMenuJava/%.1/%.19/%.5">
+      <details key="start" value="8443"/>
+      <details key="end" value="8464"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.245" references="/0/generateMainActivityWithMenuJava/%.1/%.19/%.5/aClass">
+      <details key="start" value="8443"/>
+      <details key="end" value="8449"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.246" references="/0/generateMainActivityWithMenuJava/%.1/%.20">
+      <details key="start" value="8616"/>
+      <details key="end" value="8844"/>
+      <details key="line" value="255"/>
+    </eAnnotations>
+    <eAnnotations source="positions.247" references="/0/generateMainActivityWithMenuJava/%.1/%.21">
+      <details key="start" value="8846"/>
+      <details key="end" value="9130"/>
+      <details key="line" value="261"/>
+    </eAnnotations>
+    <eAnnotations source="positions.248" references="/0/generateMainActivityWithMenuJava/%.1/%.21/%">
+      <details key="start" value="8894"/>
+      <details key="end" value="9123"/>
+      <details key="line" value="262"/>
+    </eAnnotations>
+    <eAnnotations source="positions.249" references="/0/generateMainActivityWithMenuJava/%.1/%.21/%.1">
+      <details key="start" value="8850"/>
+      <details key="end" value="8891"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.250" references="/0/generateMainActivityWithMenuJava/%.1/%.21/%.1/aClass">
+      <details key="start" value="8866"/>
+      <details key="end" value="8872"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.251" references="/0/generateMainActivityWithMenuJava/%.1/%.21/%.1/s">
+      <details key="start" value="8874"/>
+      <details key="end" value="8875"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.252" references="/0/generateMainActivityWithMenuJava/%.1/%.21/%.1/%">
+      <details key="start" value="8877"/>
+      <details key="end" value="8889"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.253" references="/0/generateMainActivityWithMenuJava/%.1/%.22">
+      <details key="start" value="9132"/>
+      <details key="end" value="9666"/>
+      <details key="line" value="267"/>
+    </eAnnotations>
+    <eAnnotations source="positions.254" references="/0/generateMainActivityWithMenuJava/%.1/%.23">
+      <details key="start" value="9668"/>
+      <details key="end" value="9757"/>
+      <details key="line" value="284"/>
+    </eAnnotations>
+    <eAnnotations source="positions.255" references="/0/generateMainActivityWithMenuJava/%.1/%.23/%">
+      <details key="start" value="9716"/>
+      <details key="end" value="9750"/>
+      <details key="line" value="285"/>
+    </eAnnotations>
+    <eAnnotations source="positions.256" references="/0/generateMainActivityWithMenuJava/%.1/%.23/%.1">
+      <details key="start" value="9672"/>
+      <details key="end" value="9713"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.257" references="/0/generateMainActivityWithMenuJava/%.1/%.23/%.1/aClass">
+      <details key="start" value="9688"/>
+      <details key="end" value="9694"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.258" references="/0/generateMainActivityWithMenuJava/%.1/%.23/%.1/s">
+      <details key="start" value="9696"/>
+      <details key="end" value="9697"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.259" references="/0/generateMainActivityWithMenuJava/%.1/%.23/%.1/%">
+      <details key="start" value="9699"/>
+      <details key="end" value="9711"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.260" references="/0/generateMainActivityWithMenuJava/%.1/%.24">
+      <details key="start" value="9759"/>
+      <details key="end" value="9964"/>
+      <details key="line" value="287"/>
+    </eAnnotations>
+    <eAnnotations source="positions.261" references="/0/generateMainActivityWithMenuJava/%.1/%.25">
+      <details key="start" value="9966"/>
+      <details key="end" value="10079"/>
+      <details key="line" value="293"/>
+    </eAnnotations>
+    <eAnnotations source="positions.262" references="/0/generateMainActivityWithMenuJava/%.1/%.25/%">
+      <details key="start" value="10014"/>
+      <details key="end" value="10072"/>
+      <details key="line" value="294"/>
+    </eAnnotations>
+    <eAnnotations source="positions.263" references="/0/generateMainActivityWithMenuJava/%.1/%.25/%.1">
+      <details key="start" value="9970"/>
+      <details key="end" value="10011"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.264" references="/0/generateMainActivityWithMenuJava/%.1/%.25/%.1/aClass">
+      <details key="start" value="9986"/>
+      <details key="end" value="9992"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.265" references="/0/generateMainActivityWithMenuJava/%.1/%.25/%.1/s">
+      <details key="start" value="9994"/>
+      <details key="end" value="9995"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.266" references="/0/generateMainActivityWithMenuJava/%.1/%.25/%.1/%">
+      <details key="start" value="9997"/>
+      <details key="end" value="10009"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.267" references="/0/generateMainActivityWithMenuJava/%.1/%.26">
+      <details key="start" value="10081"/>
+      <details key="end" value="10094"/>
+      <details key="line" value="296"/>
+    </eAnnotations>
+    <eAnnotations source="positions.268" references="/0/generateMainActivityWithMenuJava/%.1/%.27">
+      <details key="start" value="1418"/>
+      <details key="end" value="1488"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.269" references="/0/generateMainActivityWithMenuJava/%.1/%.27/%">
+      <details key="start" value="1418"/>
+      <details key="end" value="1450"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.270" references="/0/generateMainActivityWithMenuJava/%.1/%.27/%.1">
+      <details key="start" value="1458"/>
+      <details key="end" value="1487"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.271" references="/0/generateMainActivityWithMenuJava/%.1/%.27/%.1/%">
+      <details key="start" value="1458"/>
+      <details key="end" value="1471"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.272" references="/0/generateMainActivityWithMenuJava/%.1/%.27/%.1/%/aClass">
+      <details key="start" value="1459"/>
+      <details key="end" value="1465"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.273" references="/0/generateMainActivityWithMenuJava/%.1/%.27/%.1/%.1">
+      <details key="start" value="1479"/>
+      <details key="end" value="1486"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.274" references="/0/generateMainActivityWithMenuJava/%.2">
+      <details key="start" value="10103"/>
+      <details key="end" value="10105"/>
+      <details key="line" value="300"/>
+    </eAnnotations>
+    <eAnnotations source="positions.275" references="/0/generateMainActivityWithMenuJava/aClass">
+      <details key="start" value="1374"/>
+      <details key="end" value="1388"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.276" references="/0/generateMainActivityWithMenuJava/s">
+      <details key="start" value="1390"/>
+      <details key="end" value="1404"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_yAetsJAbEeOfpqUUSIF6zw/18" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/profile/_yAetsJAbEeOfpqUUSIF6zw/18 model.profile.uml#_yAetsZAbEeOfpqUUSIF6zw">
+  <uml:Model xmi:id="_jWEfUIKUEeOTes065T7rKQ" name="model">
+    <packagedElement xmi:type="uml:Class" xmi:id="_apTuEIKVEeOTes065T7rKQ" name="PhotoScreen">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_aVCqEIKcEeOTes065T7rKQ" name="photoGallery" type="_yf2oQIKcEeOTes065T7rKQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_NOU2AIKdEeOTes065T7rKQ" name="imageView">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NOU2AYKdEeOTes065T7rKQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NOU2AoKdEeOTes065T7rKQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OlF0oIKdEeOTes065T7rKQ" name="toast">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OlF0oYKdEeOTes065T7rKQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OlF0ooKdEeOTes065T7rKQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_jn2iIIKwEeOBN62PX0cWrw" name="customImage" type="_QNj-kIKuEeOBN62PX0cWrw" association="_jn3JMIKwEeOBN62PX0cWrw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jn2iIYKwEeOBN62PX0cWrw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jn2iIoKwEeOBN62PX0cWrw" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_MIMngIK1EeOBN62PX0cWrw" name="galleryImageAdapter">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MIMngYK1EeOBN62PX0cWrw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MIMngoK1EeOBN62PX0cWrw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_2vhsEIL8EeOEHqKcHg_IvQ" name="largeImage" type="_nmmlIIL8EeOEHqKcHg_IvQ" association="_2vhsE4L8EeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2vhsEYL8EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2vhsEoL8EeOEHqKcHg_IvQ" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_f4QfMIKVEeOTes065T7rKQ" name="PlacesScreen">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ASds0IL7EeOEHqKcHg_IvQ" name="mapSubscreen" type="_w00vkIL5EeOEHqKcHg_IvQ" association="_ASeT4IL7EeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ASds0YL7EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ASds0oL7EeOEHqKcHg_IvQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_A48eAIL7EeOEHqKcHg_IvQ" name="listSubscreen" type="_stxlMIL6EeOEHqKcHg_IvQ" association="_A48eA4L7EeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_A48eAYL7EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_A48eAoL7EeOEHqKcHg_IvQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_6dXsQIL7EeOEHqKcHg_IvQ" name="pOI" type="_Nm-24IL7EeOEHqKcHg_IvQ" association="_6dYTUIL7EeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6dXsQYL7EeOEHqKcHg_IvQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6dXsQoL7EeOEHqKcHg_IvQ" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_xPEaAIKVEeOTes065T7rKQ" name="SliderMenu">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_AAIoUIKbEeOTes065T7rKQ" name="placesScreenFragment" type="_f4QfMIKVEeOTes065T7rKQ" association="_AAJPYIKbEeOTes065T7rKQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AAIoUYKbEeOTes065T7rKQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AAIoUoKbEeOTes065T7rKQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_2mkv8ILyEeOEHqKcHg_IvQ" name="navigationItems" visibility="public" type="_IjPJ0ILzEeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_29xH8ILyEeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_29xH8YLyEeOEHqKcHg_IvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_29yWEILyEeOEHqKcHg_IvQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_786GAILzEeOEHqKcHg_IvQ" name="navDrawerItem" type="_nJorYILzEeOEHqKcHg_IvQ" association="_787UIILzEeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_786GAYLzEeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_786GAoLzEeOEHqKcHg_IvQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ajIVgIMBEeOEHqKcHg_IvQ" name="placeScreenAlternative" type="_Jk-LQIMBEeOEHqKcHg_IvQ" association="_ajI8kIMBEeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ajIVgYMBEeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ajIVgoMBEeOEHqKcHg_IvQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qJwFEIMBEeOEHqKcHg_IvQ" name="photoScreenAlternative" type="_imIioIMBEeOEHqKcHg_IvQ" association="_qJwsIIMBEeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qJwFEYMBEeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qJwFEoMBEeOEHqKcHg_IvQ" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_AAJPYIKbEeOTes065T7rKQ" name="sliderMenu_placesScreenFragment_1" memberEnd="_AAJPYYKbEeOTes065T7rKQ _AAIoUIKbEeOTes065T7rKQ">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_AAJPYYKbEeOTes065T7rKQ" name="sliderMenu" type="_xPEaAIKVEeOTes065T7rKQ" association="_AAJPYIKbEeOTes065T7rKQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AAJPYoKbEeOTes065T7rKQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AAJPY4KbEeOTes065T7rKQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_6PnwUIKcEeOTes065T7rKQ" name="InteractionElements">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_yf2oQIKcEeOTes065T7rKQ" name="Gallery"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_dkbnIIKwEeOBN62PX0cWrw" name="Button"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_IjPJ0ILzEeOEHqKcHg_IvQ" name="List"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_QNj-kIKuEeOBN62PX0cWrw" name="CustomImage" visibility="package"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_jn3JMIKwEeOBN62PX0cWrw" name="photoScreenFragment_customImage_1" memberEnd="_jn3JMYKwEeOBN62PX0cWrw _jn2iIIKwEeOBN62PX0cWrw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_jn3JMYKwEeOBN62PX0cWrw" name="photoScreenFragment" type="_apTuEIKVEeOTes065T7rKQ" association="_jn3JMIKwEeOBN62PX0cWrw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jn3JMoKwEeOBN62PX0cWrw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jn3JM4KwEeOBN62PX0cWrw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_9vET4IK2EeOBN62PX0cWrw" name="MainController">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_11hIQIK3EeOBN62PX0cWrw" name="sliderMenu" type="_xPEaAIKVEeOTes065T7rKQ" association="_11hIQ4K3EeOBN62PX0cWrw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_11hIQYK3EeOBN62PX0cWrw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_11hIQoK3EeOBN62PX0cWrw" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_XzzNAIL3EeOEHqKcHg_IvQ" name="navigationItemClicked"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_11hIQ4K3EeOBN62PX0cWrw" name="mainActivity_sliderMenu_1" memberEnd="_11hIRIK3EeOBN62PX0cWrw _11hIQIK3EeOBN62PX0cWrw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_11hIRIK3EeOBN62PX0cWrw" name="mainActivity" type="_9vET4IK2EeOBN62PX0cWrw" association="_11hIQ4K3EeOBN62PX0cWrw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_11hIRYK3EeOBN62PX0cWrw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_11hIRoK3EeOBN62PX0cWrw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_nJorYILzEeOEHqKcHg_IvQ" name="NavDrawerItem">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_VV7jwIL0EeOEHqKcHg_IvQ" name="title" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Vp62wIL0EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vp7d0IL0EeOEHqKcHg_IvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_Vp9TAIL0EeOEHqKcHg_IvQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YucXsIL0EeOEHqKcHg_IvQ" name="icon" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Y-JnoIL0EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Y-KOsIL0EeOEHqKcHg_IvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_Y-MD4IL0EeOEHqKcHg_IvQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_b6wisIL0EeOEHqKcHg_IvQ" name="isCounterVisible" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cggUEIL0EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cgg7IIL0EeOEHqKcHg_IvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_cgiJQIL0EeOEHqKcHg_IvQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_jdi-sIL0EeOEHqKcHg_IvQ" name="count" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jwuZYIL0EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jwvAcIL0EeOEHqKcHg_IvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_jwwOkIL0EeOEHqKcHg_IvQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_sZqoUIL4EeOEHqKcHg_IvQ" name="photoScreen" type="_apTuEIKVEeOTes065T7rKQ" association="_sZrPYIL4EeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sZqoUYL4EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sZqoUoL4EeOEHqKcHg_IvQ" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_787UIILzEeOEHqKcHg_IvQ" name="sliderMenu_navDrawerItem_1" memberEnd="_787UIYLzEeOEHqKcHg_IvQ _786GAILzEeOEHqKcHg_IvQ">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_787UIYLzEeOEHqKcHg_IvQ" name="sliderMenu" type="_xPEaAIKVEeOTes065T7rKQ" association="_787UIILzEeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_787UIoLzEeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_787UI4LzEeOEHqKcHg_IvQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_sZrPYIL4EeOEHqKcHg_IvQ" name="navDrawerItem_photoScreen_1" memberEnd="_sZrPYYL4EeOEHqKcHg_IvQ _sZqoUIL4EeOEHqKcHg_IvQ">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_sZrPYYL4EeOEHqKcHg_IvQ" name="navDrawerItem" type="_xPEaAIKVEeOTes065T7rKQ" association="_sZrPYIL4EeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sZrPYoL4EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sZrPY4L4EeOEHqKcHg_IvQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_w00vkIL5EeOEHqKcHg_IvQ" name="MapSubscreen">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7nMF8IL5EeOEHqKcHg_IvQ" name="showList" visibility="public" type="_dkbnIIKwEeOBN62PX0cWrw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_79EPUIL5EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_79EPUYL5EeOEHqKcHg_IvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_79E2YIL5EeOEHqKcHg_IvQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_stxlMIL6EeOEHqKcHg_IvQ" name="ListSubscreen">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_1q-wwIL6EeOEHqKcHg_IvQ" name="showMap" visibility="public" type="_dkbnIIKwEeOBN62PX0cWrw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2D0HgIL6EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2D0HgYL6EeOEHqKcHg_IvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_2D0ukIL6EeOEHqKcHg_IvQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_KbCNYIL9EeOEHqKcHg_IvQ" name="poiList" visibility="public" type="_IjPJ0ILzEeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_K6V_kIL9EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_K6WmoIL9EeOEHqKcHg_IvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_K6XNsIL9EeOEHqKcHg_IvQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ASeT4IL7EeOEHqKcHg_IvQ" name="placesScreen_mapSubscreen_1" memberEnd="_ASeT4YL7EeOEHqKcHg_IvQ _ASds0IL7EeOEHqKcHg_IvQ">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ASeT4YL7EeOEHqKcHg_IvQ" name="placesScreen" type="_f4QfMIKVEeOTes065T7rKQ" association="_ASeT4IL7EeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ASeT4oL7EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ASeT44L7EeOEHqKcHg_IvQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_A48eA4L7EeOEHqKcHg_IvQ" name="placesScreen_listSubscreen_1" memberEnd="_A48eBIL7EeOEHqKcHg_IvQ _A48eAIL7EeOEHqKcHg_IvQ">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_A48eBIL7EeOEHqKcHg_IvQ" name="placesScreen" type="_f4QfMIKVEeOTes065T7rKQ" association="_A48eA4L7EeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_A48eBYL7EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_A48eBoL7EeOEHqKcHg_IvQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Nm-24IL7EeOEHqKcHg_IvQ" name="POI">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_RseFkIL7EeOEHqKcHg_IvQ" name="name" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R9nf8IL7EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R9nf8YL7EeOEHqKcHg_IvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_R9oHAIL7EeOEHqKcHg_IvQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_SUZBMIL7EeOEHqKcHg_IvQ" name="latitude" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SeJaIIL7EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SeKBMIL7EeOEHqKcHg_IvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_SeKoQIL7EeOEHqKcHg_IvQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_fwKCwIL7EeOEHqKcHg_IvQ" name="longitude" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_f5x40IL7EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_f5yf4IL7EeOEHqKcHg_IvQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_f5zG8IL7EeOEHqKcHg_IvQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_6dYTUIL7EeOEHqKcHg_IvQ" name="placesScreen_pOI_1" memberEnd="_6dYTUYL7EeOEHqKcHg_IvQ _6dXsQIL7EeOEHqKcHg_IvQ">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_6dYTUYL7EeOEHqKcHg_IvQ" name="placesScreen" type="_f4QfMIKVEeOTes065T7rKQ" association="_6dYTUIL7EeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6dYTUoL7EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6dYTU4L7EeOEHqKcHg_IvQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_nmmlIIL8EeOEHqKcHg_IvQ" name="LargeImage"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_2vhsE4L8EeOEHqKcHg_IvQ" name="photoScreen_largeImage_1" memberEnd="_2vhsFIL8EeOEHqKcHg_IvQ _2vhsEIL8EeOEHqKcHg_IvQ">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_2vhsFIL8EeOEHqKcHg_IvQ" name="photoScreen" type="_apTuEIKVEeOTes065T7rKQ" association="_2vhsE4L8EeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2vhsFYL8EeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2vhsFoL8EeOEHqKcHg_IvQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Jk-LQIMBEeOEHqKcHg_IvQ" name="PlaceScreenAlternative">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YcUaAIMBEeOEHqKcHg_IvQ" name="pOI" type="_Nm-24IL7EeOEHqKcHg_IvQ" association="_YcVBEIMBEeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YcUaAYMBEeOEHqKcHg_IvQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YcUaAoMBEeOEHqKcHg_IvQ" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_YcVBEIMBEeOEHqKcHg_IvQ" name="placeScreenAlternative_pOI_1" memberEnd="_YcVBEYMBEeOEHqKcHg_IvQ _YcUaAIMBEeOEHqKcHg_IvQ">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_YcVBEYMBEeOEHqKcHg_IvQ" name="placeScreenAlternative" type="_Jk-LQIMBEeOEHqKcHg_IvQ" association="_YcVBEIMBEeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YcVBEoMBEeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YcVBE4MBEeOEHqKcHg_IvQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ajI8kIMBEeOEHqKcHg_IvQ" name="sliderMenu_placeScreenAlternative_1" memberEnd="_ajI8kYMBEeOEHqKcHg_IvQ _ajIVgIMBEeOEHqKcHg_IvQ">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ajI8kYMBEeOEHqKcHg_IvQ" name="sliderMenu" type="_xPEaAIKVEeOTes065T7rKQ" association="_ajI8kIMBEeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ajI8koMBEeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ajI8k4MBEeOEHqKcHg_IvQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_imIioIMBEeOEHqKcHg_IvQ" name="PhotoScreenAlternative">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_sjMBoIMBEeOEHqKcHg_IvQ" name="customImage" type="_QNj-kIKuEeOBN62PX0cWrw" association="_sjMosIMBEeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sjMBoYMBEeOEHqKcHg_IvQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sjMBooMBEeOEHqKcHg_IvQ" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_qJwsIIMBEeOEHqKcHg_IvQ" name="sliderMenu_photoScreenAlternative_1" memberEnd="_qJwsIYMBEeOEHqKcHg_IvQ _qJwFEIMBEeOEHqKcHg_IvQ">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_qJwsIYMBEeOEHqKcHg_IvQ" name="sliderMenu" type="_xPEaAIKVEeOTes065T7rKQ" association="_qJwsIIMBEeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qJwsIoMBEeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qJwsI4MBEeOEHqKcHg_IvQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_sjMosIMBEeOEHqKcHg_IvQ" name="photoScreenAlternative_customImage_1" memberEnd="_sjMosYMBEeOEHqKcHg_IvQ _sjMBoIMBEeOEHqKcHg_IvQ">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_sjMosYMBEeOEHqKcHg_IvQ" name="photoScreenAlternative" type="_imIioIMBEeOEHqKcHg_IvQ" association="_sjMosIMBEeOEHqKcHg_IvQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sjMosoMBEeOEHqKcHg_IvQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sjMos4MBEeOEHqKcHg_IvQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_2ZRjIIKXEeOTes065T7rKQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2hcAoIKXEeOTes065T7rKQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="model.profile.uml#_yAetsZAbEeOfpqUUSIF6zw"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="model.profile.uml#_lEC5gIKTEeOTes065T7rKQ"/>
+    </profileApplication>
+  </uml:Model>
+  <profile:Model xmi:id="_WprGYIKuEeOBN62PX0cWrw" base_Class="_QNj-kIKuEeOBN62PX0cWrw"/>
+  <profile:Gallery xmi:id="_c7IWAIKxEeOBN62PX0cWrw" base_Property="_aVCqEIKcEeOTes065T7rKQ"/>
+  <profile:List xmi:id="_aLCuAILzEeOEHqKcHg_IvQ" base_Property="_2mkv8ILyEeOEHqKcHg_IvQ"/>
+  <profile:Model xmi:id="_mxeNkIL0EeOEHqKcHg_IvQ" base_Class="_nJorYILzEeOEHqKcHg_IvQ"/>
+  <profile:Controller xmi:id="_OfJx0IL3EeOEHqKcHg_IvQ" base_Class="_9vET4IK2EeOBN62PX0cWrw"/>
+  <profile:EventHandler xmi:id="_cCc-wIL3EeOEHqKcHg_IvQ" base_Operation="_XzzNAIL3EeOEHqKcHg_IvQ"/>
+  <profile:ScreenTemplates xmi:id="_GCD0QIL4EeOEHqKcHg_IvQ" base_Class="_f4QfMIKVEeOTes065T7rKQ"/>
+  <profile:ScreenTemplates xmi:id="_lhG1EIL4EeOEHqKcHg_IvQ" base_Class="_apTuEIKVEeOTes065T7rKQ"/>
+  <profile:Button xmi:id="_-a6KwIL5EeOEHqKcHg_IvQ" base_Property="_7nMF8IL5EeOEHqKcHg_IvQ"/>
+  <profile:Button xmi:id="_5q3twIL6EeOEHqKcHg_IvQ" base_Property="_1q-wwIL6EeOEHqKcHg_IvQ"/>
+  <profile:Model xmi:id="_QWZqgIL7EeOEHqKcHg_IvQ" base_Class="_Nm-24IL7EeOEHqKcHg_IvQ"/>
+  <profile:List xmi:id="_O1C6kIL9EeOEHqKcHg_IvQ" base_Property="_KbCNYIL9EeOEHqKcHg_IvQ"/>
+  <profile:MapListSwitcherView xmi:id="_Tyz4QIMBEeOEHqKcHg_IvQ" base_Class="_Jk-LQIMBEeOEHqKcHg_IvQ"/>
+  <profile:PhotoGalleryView xmi:id="_n1-EkIMBEeOEHqKcHg_IvQ" base_Class="_imIioIMBEeOEHqKcHg_IvQ"/>
+</xmi:XMI>

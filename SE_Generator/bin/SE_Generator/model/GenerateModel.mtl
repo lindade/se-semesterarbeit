@@ -1,0 +1,443 @@
+[comment encoding = UTF-8 /]
+[module GenerateModel('http://www.eclipse.org/uml2/4.0.0/UML')]
+[import SE_Generator::xml::GenerateXML/]
+
+
+[template public generateModel(aClass : Class, s : Stereotype)]
+	[if s.name.equalsIgnoreCase('appStart')]
+			[generateMenuEntry(aClass)/]
+			[generateMenuEntryAdapter(aClass)/]
+	[/if]	
+
+	[if s.name.equalsIgnoreCase('mapListSwitcherView')]
+ 			[generatePOI(aClass)/]
+			[generatePOIAdapter(aClass)/]
+	[/if]
+
+	[if s.name.equalsIgnoreCase('photoGalleryView')]
+ 			[generateCustomImage(aClass)/]
+			[generateGalleryImageAdapter(aClass)/]
+	[/if]
+[/template]
+
+[template public generateMenuEntry(aClass : Class)]
+	[file (('src/com/ldag/se_application/model/MenuEntry.java'), false)]
+package com.ldag.se_application.model;
+
+public class MenuEntry {
+    
+    private String title;
+    private int icon;
+    private String count = "0";
+    // boolean to set visiblity of the counter
+    private boolean isCounterVisible = false;
+     
+    public MenuEntry(){}
+ 
+    public MenuEntry(String title, int icon){
+        this.title = title;
+        this.icon = icon;
+    }
+     
+    public MenuEntry(String title, int icon, boolean isCounterVisible, String count){
+        this.title = title;
+        this.icon = icon;
+        this.isCounterVisible = isCounterVisible;
+        this.count = count;
+    }
+     
+    public String getTitle(){
+        return this.title;
+    }
+     
+    public int getIcon(){
+        return this.icon;
+    }
+     
+    public String getCount(){
+        return this.count;
+    }
+     
+    public boolean getCounterVisibility(){
+        return this.isCounterVisible;
+    }
+     
+    public void setTitle(String title){
+        this.title = title;
+    }
+     
+    public void setIcon(int icon){
+        this.icon = icon;
+    }
+     
+    public void setCount(String count){
+        this.count = count;
+    }
+     
+    public void setCounterVisibility(boolean isCounterVisible){
+        this.isCounterVisible = isCounterVisible;
+    }
+}
+[/file]
+[/template]
+
+[template public generateMenuEntryAdapter(aClass : Class)]
+	[file (('src/com/ldag/se_application/adapter/MenuEntryAdapter.java'), false)]
+package com.ldag.se_application.adapter;
+ 
+import java.util.ArrayList;
+import android.app.Activity;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.ldag.se_application.R;
+import com.ldag.se_application.model.MenuEntry;
+ 
+public class MenuEntryAdapter extends BaseAdapter {
+     
+    private Context context;
+    private ArrayList<MenuEntry> navDrawerItems;
+     
+    public MenuEntryAdapter(Context context, ArrayList<MenuEntry> navDrawerItems){
+        this.context = context;
+        this.navDrawerItems = navDrawerItems;
+    }
+ 
+    @Override
+    public int getCount() {
+        return navDrawerItems.size();
+    }
+ 
+    @Override
+    public Object getItem(int position) {       
+        return navDrawerItems.get(position);
+    }
+ 
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+ 
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        if (convertView == null) {
+            LayoutInflater mInflater = (LayoutInflater)
+                    context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+            convertView = mInflater.inflate(R.layout.menu_drawer_list_item, null);
+        }
+          
+        ImageView imgIcon = (ImageView) convertView.findViewById(R.id.icon);
+        TextView txtTitle = (TextView) convertView.findViewById(R.id.title);
+        TextView txtCount = (TextView) convertView.findViewById(R.id.counter);
+          
+        imgIcon.setImageResource(navDrawerItems.get(position).getIcon());        
+        txtTitle.setText(navDrawerItems.get(position).getTitle());
+         
+        // displaying count
+        // check whether it set visible or not
+        if(navDrawerItems.get(position).getCounterVisibility()){
+            txtCount.setText(navDrawerItems.get(position).getCount());
+        }else{
+            // hide the counter view
+            txtCount.setVisibility(View.GONE);
+        }
+         
+        return convertView;
+    }
+ 
+}
+[/file]
+[/template]
+
+
+
+[template public generatePOI(aClass : Class)]
+	[file (('src/com/ldag/se_application/model/POI.java'), false)]
+package com.ldag.se_application.model;
+
+public class POI {
+	
+	private String name;
+	private String description;
+	private String startDate;
+	private String endDate;
+	private double latitude;
+	private double longitude;
+	
+	
+	public POI() {
+		super();
+	}
+	
+	public POI(String name, String description, String startDate, String endDate, double latitude, double longitude) {
+		super();
+		this.name = name;
+		this.description = description;
+		this.startDate = startDate;
+		this.endDate = endDate;
+		this.latitude = latitude;
+		this.longitude = longitude;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public String getStartDate() {
+		return startDate;
+	}
+	public void setStartDate(String date) {
+		this.startDate = date;
+	}
+	public String getEndDate() {
+		return endDate;
+	}
+	public void setEndDate(String date) {
+		this.endDate = date;
+	}
+	public double getLatitude() {
+		return latitude;
+	}
+	public void setLatitude(double d) {
+		this.latitude = d;
+	}
+	public double getLongitude() {
+		return longitude;
+	}
+	public void setLongitude(double longitude) {
+		this.longitude = longitude;
+	}
+
+	@Override
+	public String toString() {
+		return "POI ['['/]name=" + name + ", description=" + description
+				+ ", latitude=" + latitude + ", longitude=" + longitude
+				+ "[']'/]";
+	}
+}
+
+[/file]
+[/template]
+
+[template public generatePOIAdapter(aClass : Class)]
+	[file (('src/com/ldag/se_application/adapter/POIListAdapter.java'), false)]
+package com.ldag.se_application.adapter;
+
+import java.util.ArrayList;
+
+import com.ldag.se_application.R;
+import com.ldag.se_application.model.POI;
+
+import android.app.Activity;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class POIListAdapter extends BaseAdapter {
+
+	 private Context context;
+	 private POI['[]'/] pois;
+	     
+	 public POIListAdapter(Context context, POI['[]'/] pois){
+	     this.context = context;
+	     this.pois = pois;
+	}
+	    
+	@Override
+	public int getCount() {
+		return this.pois.length;
+	}
+
+
+	public POI['[]'/] getPois() {
+		return pois;
+	}
+
+	public void setPois(POI['[]'/] pois) {
+		this.pois = pois;
+	}
+
+	@Override
+	public long getItemId(int position) {
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) { 
+			if (convertView == null) {
+	            LayoutInflater mInflater = (LayoutInflater)
+	                    context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+	            convertView = mInflater.inflate(R.layout.poi_list_item, null);
+	        }
+	          
+	        //ImageView thumbnail = (ImageView) convertView.findViewById(R.id.poi_image);
+	        TextView textName = (TextView) convertView.findViewById(R.id.poi_name);
+	        TextView textDescription = (TextView) convertView.findViewById(R.id.poi_description);
+	        TextView textDate = (TextView) convertView.findViewById(R.id.poi_date);
+	          
+	        textName.setText(this.pois['['/]position[']'/].getName());        
+	        textDescription.setText(this.pois['['/]position[']'/].getDescription());
+	        textDate.setText(this.pois['['/]position[']'/].getStartDate() + " - " + this.pois['['/]position[']'/].getEndDate());
+	         
+	        return convertView;
+	}
+
+	@Override
+	public Object getItem(int position) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
+
+
+[/file]
+[/template]
+
+
+
+[template public generateCustomImage(aClass : Class)]
+	[file (('src/com/ldag/se_application/model/CustomImage.java'), false)]
+package com.ldag.se_application.model;
+
+import android.content.Context;
+
+public class CustomImage {
+	
+	private String resourceName;
+	private String subtitle;
+	private String dateTaken;
+	private int imageResourceId;
+	
+	public CustomImage(String resourceName, String subtitle, String dateTaken, Context context) {
+		super();
+		this.resourceName = resourceName;
+		this.subtitle = subtitle;
+		this.dateTaken = dateTaken;
+		setImageResourceId(context);
+	}
+
+	public CustomImage() {
+		super();
+	}
+
+	public String getResourceName() {
+		return resourceName;
+	}
+
+	public void setResourceName(String resourceName) {
+		this.resourceName = resourceName;
+	}
+	
+	public int getImageResourceId() {
+		return imageResourceId;
+	}
+
+	public void setImageResourceId(Context context) {
+		this.imageResourceId = context.getResources().getIdentifier(this.getResourceName(), "drawable", context.getPackageName());
+	}
+
+
+	public String getSubtitle() {
+		return subtitle;
+	}
+
+	public void setSubtitle(String subtitle) {
+		this.subtitle = subtitle;
+	}
+
+	public String getDateTaken() {
+		return dateTaken;
+	}
+
+	public void setDateTaken(String dateTaken) {
+		this.dateTaken = dateTaken;
+	}
+
+	@Override
+	public String toString() {
+		return "Image ['['/]resourceName=" + resourceName + ", subtitle="
+				+ subtitle + ", dateTaken=" + dateTaken + "[']'/]";
+	}
+
+}
+
+
+
+[/file]
+[/template]
+
+[template public generateGalleryImageAdapter(aClass : Class)]
+	[file (('src/com/ldag/se_application/adapter/GalleryImageAdapter.java'), false)]
+package com.ldag.se_application.adapter;
+
+import java.util.ArrayList;
+
+import com.ldag.se_application.model.CustomImage;
+
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Gallery;
+import android.widget.ImageView;
+import android.widget.SpinnerAdapter;
+
+public class GalleryImageAdapter extends BaseAdapter implements SpinnerAdapter {
+
+	private Context mContext;
+	private ArrayList<CustomImage> photos;
+	//private PhotoScreenFragment photoScreen;
+
+    public GalleryImageAdapter(Context context, ArrayList<CustomImage> photos)
+    {
+        this.mContext = context;
+        this.photos = photos;
+    }
+
+	public int getCount() {
+        return this.photos.size();
+    }
+
+    public Object getItem(int position) {
+        return position;
+    }
+
+    public long getItemId(int position) {
+        return position;
+    }
+    
+    public View getView(int index, View view, ViewGroup viewGroup)
+    {
+        ImageView iView = new ImageView(mContext);
+
+        iView.setImageResource(this.photos.get(index).getImageResourceId());
+        iView.setLayoutParams(new Gallery.LayoutParams(156, 104));
+   
+        iView.setScaleType(ImageView.ScaleType.FIT_XY);
+
+        return iView;
+    }
+}
+
+
+
+[/file]
+[/template]

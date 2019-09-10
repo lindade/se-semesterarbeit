@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ 
+    <string name="app_name">Meine Reise 13.02. 17:00</string>
+    <string name="add_photo">Foto hinzufuegen</string>
+    <string name="edit_photo">Foto bearbeiten</string>
+    <string name="remove_photo">Foto loeschen</string>
+       
+    <!-- AddAndEditCustomImageFragment -->
+    <string name="customImage_place">Ort</string>
+    <string name="customImage_description">Beschreibung</string>
+    <string name="customImage_date">Datum</string>
+    <string name="customImage_dateHint">TT. MM. YYYY</string>
+    <string name="customImage_save">Speichern</string>
+  
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_action_place</item>
+        <item>@drawable/ic_action_map</item>
+        <item>@drawable/ic_action_read</item>
+        <item>@drawable/ic_action_camera</item>
+        <item>@drawable/ic_action_video</item>
+        <item>@drawable/ic_action_person</item>
+    </array>
+ 
+</resources>

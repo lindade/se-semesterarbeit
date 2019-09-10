@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_6oNiUI-IEeO5oedSuMlnCw/11" xmlns:profile_1="http:///schemas/profile/_Yoc4sJF_EeOFhLFLtytQDQ/22" xmlns:profile_2="http:///schemas/profile/_6OzpkJTHEeON15jaaEF6Sg/28" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/profile/_6oNiUI-IEeO5oedSuMlnCw/11 file:/Users/andreagerlach/Informatik/Java/Projekte/SE_Semesterarbeit/SE_Application/model/model.profile.uml#_6oRzwI-IEeO5oedSuMlnCw http:///schemas/profile/_Yoc4sJF_EeOFhLFLtytQDQ/22 file:/Users/andreagerlach/Informatik/Java/Projekte/SE_Semesterarbeit/SE_Application/model/model.profile.uml#_YodfwJF_EeOFhLFLtytQDQ http:///schemas/profile/_6OzpkJTHEeON15jaaEF6Sg/28 model.profile.uml#_6O03sJTHEeON15jaaEF6Sg">
+  <uml:Model xmi:id="_R7NhoI8vEeO1jNrvqaqidg" name="model">
+    <packagedElement xmi:type="uml:Class" xmi:id="_dDhJcI9IEeO1jNrvqaqidg" name="MainActivity">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_W7fGgI-QEeO5oedSuMlnCw" name="aktuell" type="_MVljAI-JEeO5oedSuMlnCw" association="_W7ftkI-QEeO5oedSuMlnCw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_W7fGgY-QEeO5oedSuMlnCw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_W7fGgo-QEeO5oedSuMlnCw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_X2xDAI-QEeO5oedSuMlnCw" name="orte" type="_F7RyAI-JEeO5oedSuMlnCw" association="_X2xqEI-QEeO5oedSuMlnCw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_X2xDAY-QEeO5oedSuMlnCw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_X2xDAo-QEeO5oedSuMlnCw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_bBB_kI-QEeO5oedSuMlnCw" name="reisetagebuch" type="_dNUGYI-PEeO5oedSuMlnCw" association="_bBCmoI-QEeO5oedSuMlnCw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bBB_kY-QEeO5oedSuMlnCw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bBB_ko-QEeO5oedSuMlnCw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_d2ph0I-QEeO5oedSuMlnCw" name="fotos" type="_eWWyEI-PEeO5oedSuMlnCw" association="_d2qI4I-QEeO5oedSuMlnCw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_d2ph0Y-QEeO5oedSuMlnCw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_d2ph0o-QEeO5oedSuMlnCw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_f5UkMI-QEeO5oedSuMlnCw" name="videos" type="_fr_vUI-PEeO5oedSuMlnCw" association="_f5VLQI-QEeO5oedSuMlnCw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_f5UkMY-QEeO5oedSuMlnCw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_f5UkMo-QEeO5oedSuMlnCw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_gYtO4I-QEeO5oedSuMlnCw" name="transportmittel" type="_gpQBwI-PEeO5oedSuMlnCw" association="_gYt18I-QEeO5oedSuMlnCw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gYtO4Y-QEeO5oedSuMlnCw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gYtO4o-QEeO5oedSuMlnCw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_g6efMI-QEeO5oedSuMlnCw" name="persoenliches" type="_47Zo8I-NEeO5oedSuMlnCw" association="_g6fGQI-QEeO5oedSuMlnCw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_g6efMY-QEeO5oedSuMlnCw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_g6efMo-QEeO5oedSuMlnCw" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_F7RyAI-JEeO5oedSuMlnCw" name="Orte"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_MVljAI-JEeO5oedSuMlnCw" name="Aktuell"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_47Zo8I-NEeO5oedSuMlnCw" name="Persoenliches"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_dNUGYI-PEeO5oedSuMlnCw" name="Reisetagebuch"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_eWWyEI-PEeO5oedSuMlnCw" name="Fotos"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_fr_vUI-PEeO5oedSuMlnCw" name="Videos"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_gpQBwI-PEeO5oedSuMlnCw" name="Transportmittel"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_W7ftkI-QEeO5oedSuMlnCw" name="sliderMenu_aktuell_1" memberEnd="_W7ftkY-QEeO5oedSuMlnCw _W7fGgI-QEeO5oedSuMlnCw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_W7ftkY-QEeO5oedSuMlnCw" name="sliderMenu" type="_dDhJcI9IEeO1jNrvqaqidg" association="_W7ftkI-QEeO5oedSuMlnCw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_W7ftko-QEeO5oedSuMlnCw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_W7ftk4-QEeO5oedSuMlnCw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_X2xqEI-QEeO5oedSuMlnCw" name="sliderMenu_orte_1" memberEnd="_X2xqEY-QEeO5oedSuMlnCw _X2xDAI-QEeO5oedSuMlnCw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_X2xqEY-QEeO5oedSuMlnCw" name="sliderMenu" type="_dDhJcI9IEeO1jNrvqaqidg" association="_X2xqEI-QEeO5oedSuMlnCw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_X2xqEo-QEeO5oedSuMlnCw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_X2xqE4-QEeO5oedSuMlnCw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_bBCmoI-QEeO5oedSuMlnCw" name="sliderMenu_reisetagebuch_1" memberEnd="_bBCmoY-QEeO5oedSuMlnCw _bBB_kI-QEeO5oedSuMlnCw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_bBCmoY-QEeO5oedSuMlnCw" name="sliderMenu" type="_dDhJcI9IEeO1jNrvqaqidg" association="_bBCmoI-QEeO5oedSuMlnCw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bBCmoo-QEeO5oedSuMlnCw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bBCmo4-QEeO5oedSuMlnCw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_d2qI4I-QEeO5oedSuMlnCw" name="sliderMenu_fotos_1" memberEnd="_d2qI4Y-QEeO5oedSuMlnCw _d2ph0I-QEeO5oedSuMlnCw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_d2qI4Y-QEeO5oedSuMlnCw" name="sliderMenu" type="_dDhJcI9IEeO1jNrvqaqidg" association="_d2qI4I-QEeO5oedSuMlnCw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_d2qI4o-QEeO5oedSuMlnCw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_d2qI44-QEeO5oedSuMlnCw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_f5VLQI-QEeO5oedSuMlnCw" name="sliderMenu_videos_1" memberEnd="_f5VLQY-QEeO5oedSuMlnCw _f5UkMI-QEeO5oedSuMlnCw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_f5VLQY-QEeO5oedSuMlnCw" name="sliderMenu" type="_dDhJcI9IEeO1jNrvqaqidg" association="_f5VLQI-QEeO5oedSuMlnCw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_f5VLQo-QEeO5oedSuMlnCw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_f5VLQ4-QEeO5oedSuMlnCw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_gYt18I-QEeO5oedSuMlnCw" name="sliderMenu_transportmittel_1" memberEnd="_gYt18Y-QEeO5oedSuMlnCw _gYtO4I-QEeO5oedSuMlnCw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_gYt18Y-QEeO5oedSuMlnCw" name="sliderMenu" type="_dDhJcI9IEeO1jNrvqaqidg" association="_gYt18I-QEeO5oedSuMlnCw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gYt18o-QEeO5oedSuMlnCw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gYt184-QEeO5oedSuMlnCw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_g6fGQI-QEeO5oedSuMlnCw" name="sliderMenu_persoenliches_1" memberEnd="_g6fGQY-QEeO5oedSuMlnCw _g6efMI-QEeO5oedSuMlnCw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_g6fGQY-QEeO5oedSuMlnCw" name="sliderMenu" type="_dDhJcI9IEeO1jNrvqaqidg" association="_g6fGQI-QEeO5oedSuMlnCw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_g6fGQo-QEeO5oedSuMlnCw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_g6fGQ4-QEeO5oedSuMlnCw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_APX_II-JEeO5oedSuMlnCw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_APxAsI-JEeO5oedSuMlnCw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="model.profile.uml#_6O03sJTHEeON15jaaEF6Sg"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="model.profile.uml#_lEC5gIKTEeOTes065T7rKQ"/>
+    </profileApplication>
+  </uml:Model>
+  <profile:MapListSwitcherView xmi:id="_KpyvkI-JEeO5oedSuMlnCw" base_Class="_F7RyAI-JEeO5oedSuMlnCw"/>
+  <profile:PhotoGalleryView xmi:id="_2_GCYI-PEeO5oedSuMlnCw" base_Class="_eWWyEI-PEeO5oedSuMlnCw"/>
+  <profile_1:CustomScreen xmi:id="_2_UmQJAbEeOfpqUUSIF6zw" base_Class="_MVljAI-JEeO5oedSuMlnCw"/>
+  <profile_1:CustomScreen xmi:id="_4TrxIJAbEeOfpqUUSIF6zw" base_Class="_dNUGYI-PEeO5oedSuMlnCw"/>
+  <profile_1:CustomScreen xmi:id="_6WA1QJAbEeOfpqUUSIF6zw" base_Class="_fr_vUI-PEeO5oedSuMlnCw"/>
+  <profile_1:CustomScreen xmi:id="_7PCH8JAbEeOfpqUUSIF6zw" base_Class="_gpQBwI-PEeO5oedSuMlnCw"/>
+  <profile_1:WebpageView xmi:id="_8iVJwJBFEeOldM5WajSLDA" base_Class="_47Zo8I-NEeO5oedSuMlnCw"/>
+  <profile_2:AppStart xmi:id="_-FkfwJTHEeON15jaaEF6Sg" base_Class="_dDhJcI9IEeO1jNrvqaqidg" appName="Meine Reise 13.02. 17:00"/>
+</xmi:XMI>

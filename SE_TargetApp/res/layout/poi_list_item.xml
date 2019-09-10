@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="0dip" >
+
+    <!-- ListRow Left side Thumbnail image -->
+<!--
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="10dip">
+
+        <ImageView
+            android:id="@+id/poi_image"
+            android:layout_width="100dip"
+            android:layout_height="80dip" 
+            android:contentDescription="@string/image_view"/>
+    </LinearLayout>
+-->
+    <!-- Menu name -->
+
+    <TextView
+        android:id="@+id/poi_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_marginLeft="10dip"
+        android:text="@string/text_view"
+        android:textColor="@color/list_item_title"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <!-- Description -->
+
+    <TextView
+        android:id="@+id/poi_description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/poi_name"
+        android:layout_marginTop="1dip"
+        android:layout_marginLeft="10dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="@string/text_view"
+        android:textColor="@color/list_item_title"
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
+
+    <!-- Date -->
+
+    <TextView
+        android:id="@+id/poi_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/thumbnail"
+        android:layout_marginLeft="10dip"
+        android:layout_below="@id/poi_description"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_marginTop="1dip"
+        android:gravity="right"
+        android:text="@string/text_view"
+        android:textColor="@color/list_item_title"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        tools:ignore="SmallSp" />
+
+</RelativeLayout>

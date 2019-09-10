@@ -1,0 +1,318 @@
+[comment encoding = UTF-8 /]
+[module GenerateBasics('http://www.eclipse.org/uml2/4.0.0/UML')/]
+
+
+[template public generateBasics(aClass : Class, s : Stereotype)]
+
+	[file (('src/com/ldag/se_application/LdagApplication.java'), false)]		
+[generateApplicationFile(aClass, s)/]
+	[/file]		
+	[file (('src/com/ldag/se_application/SQLHelper.java'), false)]		
+[generateDatabase(aClass, s)/]
+	[/file]		
+	[file (('res/values/strings.xml'), false)]		
+[generateStringsXML(aClass, s)/]
+	[/file]	
+	[file (('res/values/styles.xml'), false)]		
+[generateStylesXML(aClass, s)/]
+	[/file]	
+
+[/template]
+
+[template public generateApplicationFile(aClass : Class, s : Stereotype)]
+package com.ldag.se_application;
+
+import android.app.Application;
+
+public class LdagApplication extends Application {
+	
+	private static LdagApplication instance;
+	private static SQLHelper sql;
+
+	@Override
+	public void onCreate() {
+		super.onCreate();
+		sql = new SQLHelper(this);
+		instance = this;
+		// Initialize the singletons so their instances
+		// are bound to the application process.
+		//initSingletons();
+	}
+
+	public static LdagApplication getInstance(){
+		return instance;
+	}
+	
+	public static SQLHelper getSQLHelper(){
+		return sql;
+	}
+
+	/*
+	protected void initSingletons() {
+		// Initialize the instance of any singleton
+		MySingleton.initInstance();
+	}*/
+}
+[/template]
+
+[template public generateDatabase(aClass : Class, s : Stereotype)]
+package com.ldag.se_application;
+
+import com.ldag.se_application.model.CustomImage;
+import com.ldag.se_application.model.POI;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
+public class SQLHelper extends SQLiteOpenHelper {
+
+	private static final String POIS_TABLE = "pois_table";
+	private static final String CUSTOMIMAGES_TABLE = "customImages_table";
+
+	public SQLHelper(Context context) {
+		super(context, "ldag.db", null, 1);
+	}
+
+	@Override
+	public void onCreate(SQLiteDatabase db) {
+		String sql = "CREATE TABLE "
+				+ POIS_TABLE
+				+ "(lat DOUBLE, lng DOUBLE, dateStart TEXT, dateEnd TEXT, placename TEXT, description TEXT)";
+		db.execSQL(sql);
+		
+		sql = "CREATE TABLE " 
+				+ CUSTOMIMAGES_TABLE
+				+ "(resourceName TEXT, subtitle TEXT, dateTaken TEXT)";
+		db.execSQL(sql);
+		
+	}
+
+	public void deleteAll(SQLiteDatabase db) {
+		db.execSQL("DROP TABLE IF EXISTS " + POIS_TABLE);
+		db.execSQL("DROP TABLE IF EXISTS " + CUSTOMIMAGES_TABLE);
+		onCreate(db);
+	}
+
+	@Override
+	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+		deleteAll(db);
+	}
+
+	@Override
+	public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+		deleteAll(db);
+	}
+
+
+	//START POIS
+	public synchronized POI['[]'/] readPois() {
+		
+		SQLiteDatabase db = getReadableDatabase();
+		
+		Cursor c = db.query(POIS_TABLE, null, null, null, null, null, null);
+		POI['[]'/] items = new POI['['/]c.getCount()[']'/];
+		for(int i=0;i<c.getCount();i++){
+			c.moveToPosition(i);
+			items['[i]'/]=readPoisFromCursor(db, c);
+		}
+		c.close();
+		return items;
+	}
+
+	
+	private POI readPoisFromCursor(SQLiteDatabase db, Cursor c){
+		POI item = new POI();
+		item.setName(c.getString(c.getColumnIndexOrThrow("placename")));
+		item.setLatitude(c.getDouble(c.getColumnIndexOrThrow("lat")));
+		item.setLongitude(c.getDouble(c.getColumnIndexOrThrow("lng")));
+		item.setStartDate(c.getString(c.getColumnIndexOrThrow("dateStart")));
+		item.setEndDate(c.getString(c.getColumnIndexOrThrow("dateEnd")));
+		item.setDescription(c.getString(c.getColumnIndexOrThrow("description")));
+		return item;
+	}
+	
+		
+	public synchronized void writePois(POI['[]'/] items) {
+		if (items == null) {
+			return;
+		}
+		SQLiteDatabase db = getWritableDatabase();
+		db.delete(POIS_TABLE, null, null);
+		for (POI item : items) {
+			ContentValues values = new ContentValues();
+			values.put("placename", item.getName());
+			values.put("lat", item.getLatitude());
+			values.put("lng", item.getLongitude());
+			values.put("dateStart", item.getStartDate());
+			values.put("dateEnd", item.getEndDate());
+			values.put("description", item.getDescription());
+			db.insertOrThrow(POIS_TABLE, null, values);
+	
+		}
+	}
+	
+	public synchronized void writePoi(POI item) {
+		if (item == null) {
+			return;
+		}
+		SQLiteDatabase db = getWritableDatabase();
+		//db.delete(POIS_TABLE, null, null);
+		
+			ContentValues values = new ContentValues();
+			values.put("placename", item.getName());
+			values.put("lat", item.getLatitude());
+			values.put("lng", item.getLongitude());
+			values.put("dateStart", item.getStartDate());
+			values.put("dateEnd", item.getEndDate());
+			values.put("description", item.getDescription());
+			db.insertOrThrow(POIS_TABLE, null, values);
+	}
+	
+	//END POIS
+
+	//START IMAGE
+
+	public synchronized CustomImage['[]'/] readCustomImage(){
+		SQLiteDatabase db = getReadableDatabase();
+		Cursor c = db.query(CUSTOMIMAGES_TABLE, null, null, null, null, null, null);
+		CustomImage['[]'/] items = new CustomImage['['/]c.getCount()[']'/];
+		for(int i=0;i<c.getCount();i++){
+			c.moveToPosition(i);
+			CustomImage item = new CustomImage();
+			item.setResourceName(c.getString(c.getColumnIndexOrThrow("resourceName")));
+			item.setSubtitle(c.getString(c.getColumnIndexOrThrow("subtitle")));
+			item.setDateTaken(c.getString(c.getColumnIndexOrThrow("dateTaken")));
+			items['[i]'/]=item;
+		}
+		c.close();
+		return items;
+	}
+	
+	public synchronized void writeNews(CustomImage['[]'/] items){
+		if(items == null){
+			return;
+		}
+		SQLiteDatabase db = getWritableDatabase();
+		db.delete(CUSTOMIMAGES_TABLE, null, null);
+		for(CustomImage item : items){
+			ContentValues values = new ContentValues();
+			values.put("resourceName", item.getResourceName());
+			values.put("subtitle", item.getSubtitle());
+			values.put("dateTaken", item.getDateTaken());
+			db.insertOrThrow(CUSTOMIMAGES_TABLE, null, values);
+		}
+	}
+	
+	//END IMAGE
+	
+}
+
+[/template]
+
+[query public isSpecificColorTheme(aClass : Class, s : Stereotype, str : String): Boolean = aClass.getValue(s, 'colorTheme').oclAsType(EnumerationLiteral).name.equalsIgnoreCase(str)/]
+
+[template public generateStylesXML(aClass : Class, s : Stereotype)]
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+		
+	[if (isSpecificColorTheme(aClass, s, 'grey'))]
+ 	 <!-- Chosen color scheme: grey -->
+	<color name="list_background">#333333</color>
+    <color name="list_background_pressed">#444444</color>
+    <color name="list_divider">#222222</color>
+    <color name="list_item_title">#FFFFFF</color>
+    <color name="counter_text_color">#FFFFFF</color>
+    <color name="backgroundGallery">#444455</color>
+	<color name="counter_text_bg">#444455</color>
+	[elseif (isSpecificColorTheme(aClass, s, 'blue'))]
+ 	 <!-- Chosen color scheme: blue -->
+	<color name="list_background">#04518C</color>
+    <color name="list_background_pressed">#003056</color>
+    <color name="list_divider">#47D9BF</color>
+    <color name="list_item_title">#00AEEB</color>
+    <color name="counter_text_color">#00AEEB</color>
+    <color name="counter_text_bg">#F2D52F</color>
+	<color name="backgroundGallery">#003056</color>
+	[elseif (isSpecificColorTheme(aClass, s, 'green'))]
+	<!-- Chosen color scheme: green -->
+	<color name="list_background">#3E7871</color>
+    <color name="list_background_pressed">#71B878</color>
+    <color name="list_divider">#00A87F</color>
+    <color name="list_item_title">#152427</color>
+    <color name="counter_text_color">#152427</color>
+    <color name="counter_text_bg">#FFC490</color>
+    <color name="backgroundGallery">#71B878</color>
+	[elseif (isSpecificColorTheme(aClass, s, 'yellow'))]
+	 <!-- Chosen color scheme: yellow -->
+    <color name="list_background">#CCA51E</color>
+    <color name="list_background_pressed">#FFCE26</color>
+    <color name="list_divider">#807039</color>
+    <color name="list_item_title">#806713</color>
+    <color name="counter_text_color">#806713</color>
+    <color name="counter_text_bg">#FFDF72</color>
+    <color name="backgroundGallery">#FFCE26</color>
+	[elseif (isSpecificColorTheme(aClass, s, 'beige'))]
+    <!-- Chosen color scheme: beige -->
+	<color name="list_background">#FFD393</color>
+    <color name="list_background_pressed">#BF9E6E</color>
+    <color name="list_divider">#806A49</color>
+    <color name="list_item_title">#403525</color>
+    <color name="counter_text_color">#403525</color>
+    <color name="counter_text_bg">#E6BE84</color>
+    <color name="backgroundGallery">#BF9E6E</color>
+	[else]
+ 	 <!-- No valid color scheme chose. -->
+	[/if]
+
+</resources>
+[/template]
+
+[template public generateStringsXML(aClass : Class, s : Stereotype)]
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ 
+    <string name="app_name">[aClass.getValue(s, 'appName')/]</string>
+    <string name="add_photo">Foto hinzufuegen</string>
+    <string name="edit_photo">Foto bearbeiten</string>
+    <string name="remove_photo">Foto loeschen</string>
+       
+    <!-- AddAndEditCustomImageFragment -->
+    <string name="customImage_place">Ort</string>
+    <string name="customImage_description">Beschreibung</string>
+    <string name="customImage_date">Datum</string>
+    <string name="customImage_dateHint">TT. MM. YYYY</string>
+    <string name="customImage_save">Speichern</string>
+  
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_action_place</item>
+        <item>@drawable/ic_action_map</item>
+        <item>@drawable/ic_action_read</item>
+        <item>@drawable/ic_action_camera</item>
+        <item>@drawable/ic_action_video</item>
+        <item>@drawable/ic_action_person</item>
+    </array>
+ 
+</resources>
+[/template]
+

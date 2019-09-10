@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ 
+    <string name="app_name">Meine Reise</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string name="image_view">Image is shown here</string>
+    <string name="text_view">Text is shown here</string>
+    <string name="add_photo">Foto hinzufügen</string>
+    <string name="edit_photo">Foto bearbeiten</string>
+    <string name="remove_photo">Foto löschen</string>
+    <string name="add_poi">POI hinzufügen</string>
+    <string name="edit_poi">POI bearbeiten</string>
+    <string name="remove_poi">POI löschen</string>
+    <string name="poi_dateEnd">Enddatum</string>
+    <string name="poi_dateBeginning">Anfangsdatum</string>
+    
+       
+    <!-- AddAndEditCustomImageFragment -->
+    <string name="customImage_place">Ort</string>
+    <string name="customImage_description">Beschreibung</string>
+    <string name="customImage_date">Datum</string>
+    <string name="customImage_dateHint">TT. MM. YYYY</string>
+    <string name="customImage_save">Speichern</string>
+    <string name="customImage_cancel">Abbrechen</string>
+    
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >Aktuell</item>
+        <item >Orte</item>
+        <item >Reisetagebuch</item>
+        <item >Fotos</item>
+        <item >Videos</item>
+        <item >Über Mich</item>
+    </string-array>
+    
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_action_place</item>
+        <item>@drawable/ic_action_map</item>
+        <item>@drawable/ic_action_read</item>
+        <item>@drawable/ic_action_camera</item>
+        <item>@drawable/ic_action_video</item>
+        <item>@drawable/ic_action_person</item>
+    </array>
+     
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+ 
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ViewSwitcher"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <RelativeLayout
+	android:background="@color/list_background_pressed"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"  >
+          
+	<fragment
+          android:id="@+id/map"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:name="com.google.android.gms.maps.MapFragment"/>
+	
+    	<ImageButton
+            android:src="@drawable/btn_list_view"
+    	    android:id="@+id/Next"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignParentRight="true"
+    	    android:layout_alignParentBottom="true"
+    	    android:contentDescription="@string/image_view"
+    	    android:background="@null"/>
+    
+    </RelativeLayout>
+ 
+    <RelativeLayout
+	android:background="@color/list_background_pressed"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" >
+    
+	<LinearLayout
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+
+	</LinearLayout>
+    
+	<ImageButton 
+            android:src="@drawable/btn_map_view"
+            android:id="@+id/Previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+    	    android:layout_alignParentRight="true"
+    	    android:layout_alignParentBottom="true"
+    	    android:contentDescription="@string/image_view"
+    	    android:background="@null"/>
+    
+    </RelativeLayout>
+ 
+</ViewSwitcher>

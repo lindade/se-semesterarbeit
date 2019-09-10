@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/add_poi"
+        android:icon="@drawable/ic_action_new"
+        android:orderInCategory="20"
+        android:showAsAction="ifRoom"
+        android:title="@string/add_poi">
+    </item>
+    <item
+        android:id="@+id/edit_poi"
+        android:icon="@drawable/ic_action_edit"
+        android:orderInCategory="9998"
+        android:showAsAction="ifRoom"
+        android:title="@string/edit_poi">
+    </item>
+ <item
+        android:id="@+id/remove_poi"
+        android:icon="@drawable/ic_action_remove"
+        android:orderInCategory="9999"
+        android:showAsAction="ifRoom"
+        android:title="@string/remove_poi">
+    </item>
+</menu>

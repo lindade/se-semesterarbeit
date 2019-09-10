@@ -1,0 +1,1732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="GenerateXML" nsURI="SE_Generator::xml::GenerateXML" startHeaderPosition="30" endHeaderPosition="90">
+    <input>
+      <takesTypesFrom href="http://www.eclipse.org/uml2/4.0.0/UML#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateXML" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;"/>
+        <body xsi:type="mtl:TemplateInvocation" definition="/0/generateMainActivityXML">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateXML/aClass">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+        <body xsi:type="mtl:IfBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation" definition="/0/generateSliderMenuXMLs">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateXML/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+          <ifExpr xsi:type="mtl:QueryInvocation" definition="/0/isSpecificMenu">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateXML/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateXML/s">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+            </argument>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="SliderMenu">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+          </ifExpr>
+        </body>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateXML/aClass">
+              <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="MainActivity">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/="/>
+        </ifExpr>
+        <else>
+          <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?>&#xD;&#xA;&#xD;&#xA;"/>
+            <body xsi:type="mtl:ForBlock">
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="mtl:TemplateInvocation" definition="/0/generatePhotoGalleryViewXML">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateXML/aClass">
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+                  </argument>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+                <ifExpr xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/equalsIgnoreCase">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateXML/%.1/%.5/%/%.1/s">
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="photoGalleryView">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  </argument>
+                </ifExpr>
+              </body>
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="mtl:TemplateInvocation" definition="/0/generateWebpageXML">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateXML/aClass">
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+                  </argument>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+                <ifExpr xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/equalsIgnoreCase">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateXML/%.1/%.5/%/%.1/s">
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="webpageView">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  </argument>
+                </ifExpr>
+              </body>
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="mtl:TemplateInvocation" definition="/0/generateMapListSwitcherViewXML">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateXML/aClass">
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+                  </argument>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+                <body xsi:type="mtl:TemplateInvocation" definition="/0/generatePoiListItemXML">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateXML/aClass">
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+                  </argument>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+                <ifExpr xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/equalsIgnoreCase">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateXML/%.1/%.5/%/%.1/s">
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="mapListSwitcherView">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  </argument>
+                </ifExpr>
+              </body>
+              <body xsi:type="mtl:IfBlock">
+                <body xsi:type="mtl:TemplateInvocation" definition="/0/generateEmptyXML">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <argument xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateXML/aClass">
+                    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+                  </argument>
+                </body>
+                <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+                <ifExpr xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/equalsIgnoreCase">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/generateXML/%.1/%.5/%/%.1/s">
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="customScreen">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  </argument>
+                </ifExpr>
+              </body>
+              <loopVariable name="s">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+              </loopVariable>
+              <iterSet xsi:type="ocl.ecore:OperationCallExp" eType="/11/Set(Stereotype)">
+                <source xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateXML/aClass">
+                  <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+                </source>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/uml2/4.0.0/UML#//Element/getAppliedStereotypes"/>
+              </iterSet>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+            <fileUrl xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="res/layout/">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="fragment_">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  </argument>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+                </source>
+                <argument xsi:type="ocl.ecore:OperationCallExp">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <source xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/generateXML/aClass">
+                      <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+                  </source>
+                  <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/toLowerCase"/>
+                </argument>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+              </source>
+              <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".xml">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+            </fileUrl>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+        </else>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+      <parameter name="aClass">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+      </parameter>
+      <parameter name="s">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="isSpecificColorTheme" visibility="Public">
+      <parameter name="aClass">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+      </parameter>
+      <parameter name="s">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+      </parameter>
+      <parameter name="str">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/equalsIgnoreCase">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//EnumerationLiteral"/>
+            <source xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/isSpecificColorTheme/aClass">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+              </source>
+              <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/isSpecificColorTheme/s">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+              </argument>
+              <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="colorTheme">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/uml2/4.0.0/UML#//Element/getValue"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/27/EnumerationLiteral">
+              <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//EnumerationLiteral"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+        </source>
+        <argument xsi:type="ocl.ecore:VariableExp" name="str" referredVariable="/0/isSpecificColorTheme/str">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+      </expression>
+      <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateSliderMenuXMLs" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?>&#xD;&#xA;&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#xD;&#xA;    android:layout_width=&quot;match_parent&quot;&#xD;&#xA;    android:layout_height=&quot;48dp&quot;&#xD;&#xA;    android:background=&quot;@layout/menu_list_selector&quot;>&#xD;&#xA; &#xD;&#xA;    &lt;ImageView&#xD;&#xA;        android:id=&quot;@+id/icon&quot;&#xD;&#xA;        android:layout_width=&quot;25dp&quot;&#xD;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xD;&#xA;        android:layout_alignParentLeft=&quot;true&quot;&#xD;&#xA;        android:layout_marginLeft=&quot;12dp&quot;&#xD;&#xA;        android:layout_marginRight=&quot;12dp&quot;&#xD;&#xA;        android:src=&quot;@drawable/ic_action_place&quot;&#xD;&#xA;        android:layout_centerVertical=&quot;true&quot; />&#xD;&#xA; &#xD;&#xA;    &lt;TextView&#xD;&#xA;        android:id=&quot;@+id/title&quot;&#xD;&#xA;        android:layout_width=&quot;wrap_content&quot;&#xD;&#xA;        android:layout_height=&quot;match_parent&quot;&#xD;&#xA;        android:layout_toRightOf=&quot;@id/icon&quot;&#xD;&#xA;        android:minHeight=&quot;?android:attr/listPreferredItemHeightSmall&quot;&#xD;&#xA;        android:textAppearance=&quot;?android:attr/textAppearanceListItemSmall&quot;&#xD;&#xA;        android:textColor=&quot;@color/list_item_title&quot;&#xD;&#xA;        android:gravity=&quot;center_vertical&quot;&#xD;&#xA;        android:paddingRight=&quot;40dp&quot;/>&#xD;&#xA;     &#xD;&#xA;    &lt;TextView android:id=&quot;@+id/counter&quot;&#xD;&#xA;        android:layout_width=&quot;wrap_content&quot;&#xD;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xD;&#xA;        android:background=&quot;@layout/menu_counter_bg&quot;&#xD;&#xA;        android:layout_alignParentRight=&quot;true&quot;&#xD;&#xA;        android:layout_centerVertical=&quot;true&quot;&#xD;&#xA;        android:layout_marginRight=&quot;8dp&quot;&#xD;&#xA;        android:textColor=&quot;@color/counter_text_color&quot;/>&#xD;&#xA; &#xD;&#xA;&lt;/RelativeLayout>&#xD;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="res/layout/">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </source>
+          <argument xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="menu_drawer_list_item">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".xml">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+        </fileUrl>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?>&#xD;&#xA;&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>&#xD;&#xA; &#xD;&#xA;    &lt;item android:drawable=&quot;@layout/menu_list_item_bg_normal&quot; android:state_activated=&quot;false&quot;/>&#xD;&#xA;    &lt;item android:drawable=&quot;@layout/menu_list_item_bg_pressed&quot; android:state_pressed=&quot;true&quot;/>&#xD;&#xA;    &lt;item android:drawable=&quot;@layout/menu_list_item_bg_pressed&quot; android:state_activated=&quot;true&quot;/>&#xD;&#xA; &#xD;&#xA;&lt;/selector>&#xD;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="res/layout/">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </source>
+          <argument xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="menu_counter_bg">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".xml">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+        </fileUrl>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#xD;&#xA;    android:shape=&quot;rectangle&quot;>&#xD;&#xA;  &lt;gradient&#xD;&#xA;      android:startColor=&quot;@color/list_background&quot;&#xD;&#xA;      android:endColor=&quot;@color/list_background&quot;&#xD;&#xA;      android:angle=&quot;90&quot; />&#xD;&#xA;&lt;/shape>&#xD;&#xA;&#xD;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="res/layout/">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </source>
+          <argument xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="menu_list_item_bg_normal">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".xml">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+        </fileUrl>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#xD;&#xA;    android:shape=&quot;rectangle&quot;>&#xD;&#xA;  &lt;gradient&#xD;&#xA;      android:startColor=&quot;@color/list_background_pressed&quot;&#xD;&#xA;      android:endColor=&quot;@color/list_background_pressed&quot;&#xD;&#xA;      android:angle=&quot;90&quot; />&#xD;&#xA;&lt;/shape>&#xD;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="res/layout/">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </source>
+          <argument xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="menu_list_item_bg_pressed">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".xml">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+        </fileUrl>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?>&#xD;&#xA;&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>&#xD;&#xA; &#xD;&#xA;    &lt;item android:drawable=&quot;@layout/menu_list_item_bg_normal&quot; android:state_activated=&quot;false&quot;/>&#xD;&#xA;    &lt;item android:drawable=&quot;@layout/menu_list_item_bg_pressed&quot; android:state_pressed=&quot;true&quot;/>&#xD;&#xA;    &lt;item android:drawable=&quot;@layout/menu_list_item_bg_pressed&quot; android:state_activated=&quot;true&quot;/>&#xD;&#xA; &#xD;&#xA;&lt;/selector>&#xD;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="res/layout/">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </source>
+          <argument xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="menu_list_selector">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".xml">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+        </fileUrl>
+      </body>
+      <parameter name="aClass">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateWebpageXML" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#xD;&#xA;    android:layout_width=&quot;match_parent&quot;&#xD;&#xA;    android:layout_height=&quot;match_parent&quot;>&#xD;&#xA;     &#xD;&#xA;&lt;WebView android:id=&quot;@+id/webView&quot;&#xD;&#xA;       android:layout_width=&quot;fill_parent&quot;&#xD;&#xA;       android:layout_height=&quot;fill_parent&quot; />&#xD;&#xA; &#xD;&#xA;&lt;/RelativeLayout>"/>
+      <parameter name="aClass">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generatePhotoGalleryViewXML" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#xD;&#xA;    xmlns:tools=&quot;http://schemas.android.com/tools&quot;&#xD;&#xA;    android:layout_width=&quot;match_parent&quot;&#xD;&#xA;    android:layout_height=&quot;match_parent&quot;&#xD;&#xA;    android:orientation=&quot;vertical&quot;&#xD;&#xA;    android:background=&quot;@color/list_background_pressed&quot;>&#xD;&#xA;&#xD;&#xA; &#xD;&#xA;    &lt;Gallery&#xD;&#xA;        android:id=&quot;@+id/gallery1&quot;&#xD;&#xA;        android:layout_width=&quot;fill_parent&quot;&#xD;&#xA;        android:layout_height=&quot;wrap_content&quot; />&#xD;&#xA;   &#xD;&#xA;     &lt;ImageView&#xD;&#xA;        android:id=&quot;@+id/imageView1&quot;&#xD;&#xA;        android:layout_marginTop=&quot;0dp&quot;&#xD;&#xA;        android:layout_width=&quot;match_parent&quot;&#xD;&#xA;        android:layout_height=&quot;match_parent&quot;&#xD;&#xA;        android:layout_gravity=&quot;center_horizontal&quot;&#xD;&#xA;        android:src=&quot;@drawable/gallery_sydney&quot; />&#xD;&#xA;&#xD;&#xA; &lt;/LinearLayout>"/>
+      <parameter name="aClass">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateMapListSwitcherViewXML" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&lt;ViewSwitcher xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#xD;&#xA;    android:id=&quot;@+id/ViewSwitcher&quot;&#xD;&#xA;    android:layout_width=&quot;fill_parent&quot;&#xD;&#xA;    android:layout_height=&quot;fill_parent&quot;>&#xD;&#xA;    &#xD;&#xA;    &lt;RelativeLayout&#xD;&#xA;&#x9;android:background=&quot;@color/list_background_pressed&quot;&#xD;&#xA;&#x9;android:layout_width=&quot;fill_parent&quot;&#xD;&#xA;&#x9;android:layout_height=&quot;fill_parent&quot;  >&#xD;&#xA;          &#xD;&#xA;&#x9; &#x9;&lt;ImageButton&#xD;&#xA;            android:src=&quot;@drawable/btn_list_view&quot;&#xD;&#xA;    &#x9;    android:id=&quot;@+id/Next&quot;&#xD;&#xA;    &#x9;    android:layout_width=&quot;wrap_content&quot;&#xD;&#xA;    &#x9;    android:layout_height=&quot;wrap_content&quot;&#xD;&#xA;    &#x9;    android:layout_alignParentRight=&quot;true&quot;&#xD;&#xA;    &#x9;    android:layout_alignParentBottom=&quot;true&quot;&#xD;&#xA;    &#x9;    android:background=&quot;@null&quot;/>&#xD;&#xA;    &#xD;&#xA;    &lt;/RelativeLayout>&#xD;&#xA; &#xD;&#xA;    &lt;RelativeLayout&#xD;&#xA;&#x9;android:background=&quot;@color/list_background_pressed&quot;&#xD;&#xA;&#x9;android:layout_width=&quot;fill_parent&quot;&#xD;&#xA;&#x9;android:layout_height=&quot;fill_parent&quot; >&#xD;&#xA;    &#xD;&#xA;&#x9;&lt;LinearLayout&#xD;&#xA;    android:id=&quot;@+id/LinearLayout1&quot;&#xD;&#xA;    android:layout_width=&quot;match_parent&quot;&#xD;&#xA;    android:layout_height=&quot;match_parent&quot;&#xD;&#xA;    android:orientation=&quot;vertical&quot;>&#xD;&#xA;&#xD;&#xA;    &lt;ListView&#xD;&#xA;        android:id=&quot;@android:id/list&quot;&#xD;&#xA;        android:layout_width=&quot;match_parent&quot;&#xD;&#xA;        android:layout_height=&quot;match_parent&quot; >&#xD;&#xA;    &lt;/ListView>&#xD;&#xA;&#xD;&#xA;&#x9;&lt;/LinearLayout>&#xD;&#xA;    &#xD;&#xA;&#x9;&lt;ImageButton &#xD;&#xA;            android:src=&quot;@drawable/btn_map_view&quot;&#xD;&#xA;            android:id=&quot;@+id/Previous&quot;&#xD;&#xA;            android:layout_width=&quot;wrap_content&quot;&#xD;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xD;&#xA;    &#x9;    android:layout_alignParentRight=&quot;true&quot;&#xD;&#xA;    &#x9;    android:layout_alignParentBottom=&quot;true&quot;&#xD;&#xA;    &#x9;    android:background=&quot;@null&quot;/>&#xD;&#xA;    &#xD;&#xA;    &lt;/RelativeLayout>&#xD;&#xA; &#xD;&#xA;&lt;/ViewSwitcher>"/>
+      <parameter name="aClass">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateEmptyXML" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#xD;&#xA;    android:layout_width=&quot;match_parent&quot;&#xD;&#xA;    android:layout_height=&quot;match_parent&quot;>&#xD;&#xA;&#xD;&#xA;&lt;/RelativeLayout>"/>
+      <parameter name="aClass">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateMainActivityXML" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?>&#xD;&#xA;&#xD;&#xA;&lt;android.support.v4.widget.DrawerLayout&#xD;&#xA;    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#xD;&#xA;    android:id=&quot;@+id/drawer_layout&quot;&#xD;&#xA;    android:layout_width=&quot;match_parent&quot;&#xD;&#xA;    android:layout_height=&quot;match_parent&quot;>&#xD;&#xA; &#xD;&#xA;    &lt;!-- Framelayout to display Fragments -->&#xD;&#xA;    &lt;FrameLayout&#xD;&#xA;        android:id=&quot;@+id/frame_container&quot;&#xD;&#xA;        android:layout_width=&quot;match_parent&quot;&#xD;&#xA;        android:layout_height=&quot;match_parent&quot; />&#xD;&#xA; &#xD;&#xA;    &lt;!-- Listview to display slider menu -->&#xD;&#xA;    &lt;ListView&#xD;&#xA;        android:id=&quot;@+id/list_slidermenu&quot;&#xD;&#xA;        android:layout_width=&quot;240dp&quot;&#xD;&#xA;        android:layout_height=&quot;match_parent&quot;&#xD;&#xA;        android:layout_gravity=&quot;start&quot;&#xD;&#xA;        android:choiceMode=&quot;singleChoice&quot;&#xD;&#xA;        android:divider=&quot;@color/list_divider&quot;&#xD;&#xA;        android:dividerHeight=&quot;1dp&quot;       &#xD;&#xA;        android:listSelector=&quot;@layout/menu_list_selector&quot;&#xD;&#xA;        android:background=&quot;@color/list_background&quot;/>&#xD;&#xA;&lt;/android.support.v4.widget.DrawerLayout>&#xD;&#xA;&#xD;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="res/layout/">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </source>
+          <argument xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="activity_main">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".xml">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+        </fileUrl>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;"/>
+      <parameter name="aClass">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generatePoiListItemXML" visibility="Public">
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?>&#xD;&#xA;&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&#xD;&#xA;    xmlns:tools=&quot;http://schemas.android.com/tools&quot;&#xD;&#xA;    android:layout_width=&quot;fill_parent&quot;&#xD;&#xA;    android:layout_height=&quot;wrap_content&quot;&#xD;&#xA;    android:orientation=&quot;horizontal&quot;&#xD;&#xA;    android:padding=&quot;0dip&quot; >&#xD;&#xA;&#xD;&#xA;    &lt;!-- ListRow Left side Thumbnail image -->&#xD;&#xA;&lt;!--&#xD;&#xA;    &lt;LinearLayout&#xD;&#xA;        android:id=&quot;@+id/thumbnail&quot;&#xD;&#xA;        android:layout_width=&quot;wrap_content&quot;&#xD;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xD;&#xA;        android:layout_alignParentLeft=&quot;true&quot;&#xD;&#xA;        android:layout_marginLeft=&quot;5dip&quot;&#xD;&#xA;        android:layout_marginRight=&quot;10dip&quot;>&#xD;&#xA;&#xD;&#xA;        &lt;ImageView&#xD;&#xA;            android:id=&quot;@+id/poi_image&quot;&#xD;&#xA;            android:layout_width=&quot;100dip&quot;&#xD;&#xA;            android:layout_height=&quot;80dip&quot;/>&#xD;&#xA;    &lt;/LinearLayout>&#xD;&#xA;-->&#xD;&#xA;    &lt;!-- Menu name -->&#xD;&#xA;&#xD;&#xA;    &lt;TextView&#xD;&#xA;        android:id=&quot;@+id/poi_name&quot;&#xD;&#xA;        android:layout_width=&quot;wrap_content&quot;&#xD;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xD;&#xA;        android:layout_marginTop=&quot;5dip&quot;&#xD;&#xA;        android:layout_marginLeft=&quot;10dip&quot;&#xD;&#xA;        android:textColor=&quot;@color/list_item_title&quot;&#xD;&#xA;        android:textSize=&quot;15sp&quot;&#xD;&#xA;        android:textStyle=&quot;bold&quot;&#xD;&#xA;        android:typeface=&quot;sans&quot; />&#xD;&#xA;&#xD;&#xA;    &lt;!-- Description -->&#xD;&#xA;&#xD;&#xA;    &lt;TextView&#xD;&#xA;        android:id=&quot;@+id/poi_description&quot;&#xD;&#xA;        android:layout_width=&quot;fill_parent&quot;&#xD;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xD;&#xA;        android:layout_below=&quot;@id/poi_name&quot;&#xD;&#xA;        android:layout_marginTop=&quot;1dip&quot;&#xD;&#xA;        android:layout_marginLeft=&quot;10dip&quot;&#xD;&#xA;        android:textColor=&quot;@color/list_item_title&quot;&#xD;&#xA;        android:textSize=&quot;10sp&quot;&#xD;&#xA;        tools:ignore=&quot;SmallSp&quot; />&#xD;&#xA;&#xD;&#xA;    &lt;!-- Date -->&#xD;&#xA;&#xD;&#xA;    &lt;TextView&#xD;&#xA;        android:id=&quot;@+id/poi_date&quot;&#xD;&#xA;        android:layout_width=&quot;wrap_content&quot;&#xD;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xD;&#xA;        android:layout_marginLeft=&quot;10dip&quot;&#xD;&#xA;        android:layout_below=&quot;@id/poi_description&quot;&#xD;&#xA;        android:layout_marginTop=&quot;1dip&quot;&#xD;&#xA;        android:gravity=&quot;right&quot;&#xD;&#xA;        android:textColor=&quot;@color/list_item_title&quot;&#xD;&#xA;        android:textSize=&quot;10sp&quot;&#xD;&#xA;        android:textStyle=&quot;bold&quot;&#xD;&#xA;        tools:ignore=&quot;SmallSp&quot; />&#xD;&#xA;&#xD;&#xA;&lt;/RelativeLayout>&#xD;&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="res/layout/">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </source>
+          <argument xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="poi_list_item">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </source>
+            <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".xml">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+        </fileUrl>
+      </body>
+      <parameter name="aClass">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="isSpecificMenu" visibility="Public">
+      <parameter name="aClass">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+      </parameter>
+      <parameter name="s">
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+      </parameter>
+      <parameter name="str">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/equalsIgnoreCase">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//EnumerationLiteral"/>
+            <source xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aClass" referredVariable="/0/isSpecificMenu/aClass">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+              </source>
+              <argument xsi:type="ocl.ecore:VariableExp" name="s" referredVariable="/0/isSpecificMenu/s">
+                <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+              </argument>
+              <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="menuType">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/uml2/4.0.0/UML#//Element/getValue"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/27/EnumerationLiteral">
+              <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//EnumerationLiteral"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
+        </source>
+        <argument xsi:type="ocl.ecore:VariableExp" name="str" referredVariable="/0/isSpecificMenu/str">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </argument>
+      </expression>
+      <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+      <eOperations name="equalsIgnoreCase">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <eParameters name="other">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateXML">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateXML"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+        </eParameters>
+        <eParameters name="s">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="isSpecificColorTheme">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/isSpecificColorTheme"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+        </eParameters>
+        <eParameters name="s">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+        </eParameters>
+        <eParameters name="str">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateSliderMenuXMLs">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateSliderMenuXMLs"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateWebpageXML">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateWebpageXML"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generatePhotoGalleryViewXML">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generatePhotoGalleryViewXML"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateMapListSwitcherViewXML">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateMapListSwitcherViewXML"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateEmptyXML">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateEmptyXML"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateMainActivityXML">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateMainActivityXML"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generatePoiListItemXML">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generatePoiListItemXML"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="isSpecificMenu">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/isSpecificMenu"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <eParameters name="aClass">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+        </eParameters>
+        <eParameters name="s">
+          <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+        </eParameters>
+        <eParameters name="str">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Class_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(Stereotype)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Stereotype"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="EnumerationLiteral">
+      <referredType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//EnumerationLiteral"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateXML">
+      <details key="start" value="96"/>
+      <details key="end" value="1017"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateXML/%">
+      <details key="start" value="159"/>
+      <details key="end" value="161"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateXML/%.1">
+      <details key="start" value="162"/>
+      <details key="end" value="1002"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateXML/%.1/%">
+      <details key="start" value="199"/>
+      <details key="end" value="201"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateXML/%.1/%.1">
+      <details key="start" value="202"/>
+      <details key="end" value="233"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateXML/%.1/%.1/aClass">
+      <details key="start" value="226"/>
+      <details key="end" value="232"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateXML/%.1/%.2">
+      <details key="start" value="235"/>
+      <details key="end" value="237"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateXML/%.1/%.3">
+      <details key="start" value="239"/>
+      <details key="end" value="332"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateXML/%.1/%.3/%">
+      <details key="start" value="287"/>
+      <details key="end" value="290"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateXML/%.1/%.3/%.1">
+      <details key="start" value="291"/>
+      <details key="end" value="321"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateXML/%.1/%.3/%.1/aClass">
+      <details key="start" value="314"/>
+      <details key="end" value="320"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateXML/%.1/%.3/%.2">
+      <details key="start" value="323"/>
+      <details key="end" value="325"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateXML/%.1/%.3/%.3">
+      <details key="start" value="243"/>
+      <details key="end" value="284"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateXML/%.1/%.3/%.3/aClass">
+      <details key="start" value="259"/>
+      <details key="end" value="265"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateXML/%.1/%.3/%.3/s">
+      <details key="start" value="267"/>
+      <details key="end" value="268"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateXML/%.1/%.3/%.3/%">
+      <details key="start" value="270"/>
+      <details key="end" value="282"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateXML/%.1/%.4">
+      <details key="start" value="166"/>
+      <details key="end" value="196"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateXML/%.1/%.4/%">
+      <details key="start" value="167"/>
+      <details key="end" value="178"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateXML/%.1/%.4/%/aClass">
+      <details key="start" value="167"/>
+      <details key="end" value="173"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateXML/%.1/%.4/%.1">
+      <details key="start" value="181"/>
+      <details key="end" value="195"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateXML/%.1/%.5">
+      <details key="start" value="335"/>
+      <details key="end" value="997"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateXML/%.1/%.5/%">
+      <details key="start" value="345"/>
+      <details key="end" value="991"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateXML/%.1/%.5/%/%">
+      <details key="start" value="447"/>
+      <details key="end" value="489"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateXML/%.1/%.5/%/%.1">
+      <details key="start" value="491"/>
+      <details key="end" value="978"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateXML/%.1/%.5/%/%.1/%">
+      <details key="start" value="549"/>
+      <details key="end" value="647"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateXML/%.1/%.5/%/%.1/%/%">
+      <details key="start" value="600"/>
+      <details key="end" value="635"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateXML/%.1/%.5/%/%.1/%/%/aClass">
+      <details key="start" value="628"/>
+      <details key="end" value="634"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateXML/%.1/%.5/%/%.1/%/%.1">
+      <details key="start" value="637"/>
+      <details key="end" value="639"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateXML/%.1/%.5/%/%.1/%/%.2">
+      <details key="start" value="553"/>
+      <details key="end" value="596"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateXML/%.1/%.5/%/%.1/%/%.2/%">
+      <details key="start" value="553"/>
+      <details key="end" value="559"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateXML/%.1/%.5/%/%.1/%/%.2/%/s">
+      <details key="start" value="553"/>
+      <details key="end" value="554"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateXML/%.1/%.5/%/%.1/%/%.2/%.1">
+      <details key="start" value="577"/>
+      <details key="end" value="595"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateXML/%.1/%.5/%/%.1/%.1">
+      <details key="start" value="652"/>
+      <details key="end" value="736"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateXML/%.1/%.5/%/%.1/%.1/%">
+      <details key="start" value="698"/>
+      <details key="end" value="724"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateXML/%.1/%.5/%/%.1/%.1/%/aClass">
+      <details key="start" value="717"/>
+      <details key="end" value="723"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateXML/%.1/%.5/%/%.1/%.1/%.1">
+      <details key="start" value="726"/>
+      <details key="end" value="728"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateXML/%.1/%.5/%/%.1/%.1/%.2">
+      <details key="start" value="656"/>
+      <details key="end" value="694"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateXML/%.1/%.5/%/%.1/%.1/%.2/%">
+      <details key="start" value="656"/>
+      <details key="end" value="662"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generateXML/%.1/%.5/%/%.1/%.1/%.2/%/s">
+      <details key="start" value="656"/>
+      <details key="end" value="657"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generateXML/%.1/%.5/%/%.1/%.1/%.2/%.1">
+      <details key="start" value="680"/>
+      <details key="end" value="693"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generateXML/%.1/%.5/%/%.1/%.2">
+      <details key="start" value="741"/>
+      <details key="end" value="880"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/generateXML/%.1/%.5/%/%.1/%.2/%">
+      <details key="start" value="795"/>
+      <details key="end" value="833"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/generateXML/%.1/%.5/%/%.1/%.2/%/aClass">
+      <details key="start" value="826"/>
+      <details key="end" value="832"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateXML/%.1/%.5/%/%.1/%.2/%.1">
+      <details key="start" value="835"/>
+      <details key="end" value="837"/>
+      <details key="line" value="24"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generateXML/%.1/%.5/%/%.1/%.2/%.2">
+      <details key="start" value="838"/>
+      <details key="end" value="868"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/generateXML/%.1/%.5/%/%.1/%.2/%.2/aClass">
+      <details key="start" value="861"/>
+      <details key="end" value="867"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generateXML/%.1/%.5/%/%.1/%.2/%.3">
+      <details key="start" value="870"/>
+      <details key="end" value="872"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateXML/%.1/%.5/%/%.1/%.2/%.4">
+      <details key="start" value="745"/>
+      <details key="end" value="791"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/generateXML/%.1/%.5/%/%.1/%.2/%.4/%">
+      <details key="start" value="745"/>
+      <details key="end" value="751"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/generateXML/%.1/%.5/%/%.1/%.2/%.4/%/s">
+      <details key="start" value="745"/>
+      <details key="end" value="746"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/generateXML/%.1/%.5/%/%.1/%.2/%.4/%.1">
+      <details key="start" value="769"/>
+      <details key="end" value="790"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generateXML/%.1/%.5/%/%.1/%.3">
+      <details key="start" value="885"/>
+      <details key="end" value="968"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/generateXML/%.1/%.5/%/%.1/%.3/%">
+      <details key="start" value="932"/>
+      <details key="end" value="956"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/generateXML/%.1/%.5/%/%.1/%.3/%/aClass">
+      <details key="start" value="949"/>
+      <details key="end" value="955"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/generateXML/%.1/%.5/%/%.1/%.3/%.1">
+      <details key="start" value="958"/>
+      <details key="end" value="960"/>
+      <details key="line" value="28"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/generateXML/%.1/%.5/%/%.1/%.3/%.2">
+      <details key="start" value="889"/>
+      <details key="end" value="928"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/generateXML/%.1/%.5/%/%.1/%.3/%.2/%">
+      <details key="start" value="889"/>
+      <details key="end" value="895"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/generateXML/%.1/%.5/%/%.1/%.3/%.2/%/s">
+      <details key="start" value="889"/>
+      <details key="end" value="890"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/generateXML/%.1/%.5/%/%.1/%.3/%.2/%.1">
+      <details key="start" value="913"/>
+      <details key="end" value="927"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/generateXML/%.1/%.5/%/%.1/s">
+      <details key="start" value="497"/>
+      <details key="end" value="509"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/generateXML/%.1/%.5/%/%.1/%.4">
+      <details key="start" value="512"/>
+      <details key="end" value="542"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/generateXML/%.1/%.5/%/%.1/%.4/aClass">
+      <details key="start" value="512"/>
+      <details key="end" value="518"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/generateXML/%.1/%.5/%/%.2">
+      <details key="start" value="980"/>
+      <details key="end" value="982"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/generateXML/%.1/%.5/%/%.3">
+      <details key="start" value="352"/>
+      <details key="end" value="436"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/generateXML/%.1/%.5/%/%.3/%">
+      <details key="start" value="352"/>
+      <details key="end" value="421"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/generateXML/%.1/%.5/%/%.3/%/%">
+      <details key="start" value="352"/>
+      <details key="end" value="387"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/generateXML/%.1/%.5/%/%.3/%/%/%">
+      <details key="start" value="352"/>
+      <details key="end" value="367"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/generateXML/%.1/%.5/%/%.3/%/%/%.1">
+      <details key="start" value="375"/>
+      <details key="end" value="386"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/generateXML/%.1/%.5/%/%.3/%/%.1">
+      <details key="start" value="395"/>
+      <details key="end" value="420"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/generateXML/%.1/%.5/%/%.3/%/%.1/%">
+      <details key="start" value="395"/>
+      <details key="end" value="406"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/generateXML/%.1/%.5/%/%.3/%/%.1/%/aClass">
+      <details key="start" value="395"/>
+      <details key="end" value="401"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/generateXML/%.1/%.5/%/%.3/%.1">
+      <details key="start" value="429"/>
+      <details key="end" value="435"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/generateXML/%.1/%.5/%.1">
+      <details key="start" value="994"/>
+      <details key="end" value="996"/>
+      <details key="line" value="31"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/generateXML/%.2">
+      <details key="start" value="1004"/>
+      <details key="end" value="1006"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/generateXML/aClass">
+      <details key="start" value="125"/>
+      <details key="end" value="139"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/generateXML/s">
+      <details key="start" value="141"/>
+      <details key="end" value="155"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/isSpecificColorTheme">
+      <details key="start" value="1021"/>
+      <details key="end" value="1204"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/isSpecificColorTheme/aClass">
+      <details key="start" value="1056"/>
+      <details key="end" value="1070"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/isSpecificColorTheme/s">
+      <details key="start" value="1072"/>
+      <details key="end" value="1086"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/isSpecificColorTheme/str">
+      <details key="start" value="1088"/>
+      <details key="end" value="1100"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/isSpecificColorTheme/%">
+      <details key="start" value="1113"/>
+      <details key="end" value="1202"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/isSpecificColorTheme/%/%">
+      <details key="start" value="1113"/>
+      <details key="end" value="1180"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/isSpecificColorTheme/%/%/%">
+      <details key="start" value="1113"/>
+      <details key="end" value="1175"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/isSpecificColorTheme/%/%/%/%">
+      <details key="start" value="1113"/>
+      <details key="end" value="1145"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/isSpecificColorTheme/%/%/%/%/aClass">
+      <details key="start" value="1113"/>
+      <details key="end" value="1119"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/isSpecificColorTheme/%/%/%/%/s">
+      <details key="start" value="1129"/>
+      <details key="end" value="1130"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/isSpecificColorTheme/%/%/%/%/%">
+      <details key="start" value="1132"/>
+      <details key="end" value="1144"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/isSpecificColorTheme/%/%/%/%.1">
+      <details key="start" value="1156"/>
+      <details key="end" value="1174"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/isSpecificColorTheme/%/str">
+      <details key="start" value="1198"/>
+      <details key="end" value="1201"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/generateSliderMenuXMLs">
+      <details key="start" value="1208"/>
+      <details key="end" value="4589"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/generateSliderMenuXMLs/%">
+      <details key="start" value="1266"/>
+      <details key="end" value="1268"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/generateSliderMenuXMLs/%.1">
+      <details key="start" value="1268"/>
+      <details key="end" value="2843"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/generateSliderMenuXMLs/%.1/%">
+      <details key="start" value="1350"/>
+      <details key="end" value="2836"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/generateSliderMenuXMLs/%.1/%.1">
+      <details key="start" value="1275"/>
+      <details key="end" value="1339"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.94" references="/0/generateSliderMenuXMLs/%.1/%.1/%">
+      <details key="start" value="1275"/>
+      <details key="end" value="1290"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/generateSliderMenuXMLs/%.1/%.1/%.1">
+      <details key="start" value="1298"/>
+      <details key="end" value="1338"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/generateSliderMenuXMLs/%.1/%.1/%.1/%">
+      <details key="start" value="1298"/>
+      <details key="end" value="1323"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/generateSliderMenuXMLs/%.1/%.1/%.1/%.1">
+      <details key="start" value="1331"/>
+      <details key="end" value="1337"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.98" references="/0/generateSliderMenuXMLs/%.2">
+      <details key="start" value="2846"/>
+      <details key="end" value="2848"/>
+      <details key="line" value="79"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/generateSliderMenuXMLs/%.3">
+      <details key="start" value="2848"/>
+      <details key="end" value="3350"/>
+      <details key="line" value="81"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/generateSliderMenuXMLs/%.3/%">
+      <details key="start" value="2924"/>
+      <details key="end" value="3343"/>
+      <details key="line" value="82"/>
+    </eAnnotations>
+    <eAnnotations source="positions.101" references="/0/generateSliderMenuXMLs/%.3/%.1">
+      <details key="start" value="2855"/>
+      <details key="end" value="2913"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.102" references="/0/generateSliderMenuXMLs/%.3/%.1/%">
+      <details key="start" value="2855"/>
+      <details key="end" value="2870"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.103" references="/0/generateSliderMenuXMLs/%.3/%.1/%.1">
+      <details key="start" value="2878"/>
+      <details key="end" value="2912"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.104" references="/0/generateSliderMenuXMLs/%.3/%.1/%.1/%">
+      <details key="start" value="2878"/>
+      <details key="end" value="2897"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.105" references="/0/generateSliderMenuXMLs/%.3/%.1/%.1/%.1">
+      <details key="start" value="2905"/>
+      <details key="end" value="2911"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.106" references="/0/generateSliderMenuXMLs/%.4">
+      <details key="start" value="3353"/>
+      <details key="end" value="3355"/>
+      <details key="line" value="90"/>
+    </eAnnotations>
+    <eAnnotations source="positions.107" references="/0/generateSliderMenuXMLs/%.5">
+      <details key="start" value="3355"/>
+      <details key="end" value="3700"/>
+      <details key="line" value="92"/>
+    </eAnnotations>
+    <eAnnotations source="positions.108" references="/0/generateSliderMenuXMLs/%.5/%">
+      <details key="start" value="3440"/>
+      <details key="end" value="3693"/>
+      <details key="line" value="93"/>
+    </eAnnotations>
+    <eAnnotations source="positions.109" references="/0/generateSliderMenuXMLs/%.5/%.1">
+      <details key="start" value="3362"/>
+      <details key="end" value="3429"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.110" references="/0/generateSliderMenuXMLs/%.5/%.1/%">
+      <details key="start" value="3362"/>
+      <details key="end" value="3377"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/generateSliderMenuXMLs/%.5/%.1/%.1">
+      <details key="start" value="3385"/>
+      <details key="end" value="3428"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.112" references="/0/generateSliderMenuXMLs/%.5/%.1/%.1/%">
+      <details key="start" value="3385"/>
+      <details key="end" value="3413"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.113" references="/0/generateSliderMenuXMLs/%.5/%.1/%.1/%.1">
+      <details key="start" value="3421"/>
+      <details key="end" value="3427"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.114" references="/0/generateSliderMenuXMLs/%.6">
+      <details key="start" value="3703"/>
+      <details key="end" value="3705"/>
+      <details key="line" value="101"/>
+    </eAnnotations>
+    <eAnnotations source="positions.115" references="/0/generateSliderMenuXMLs/%.7">
+      <details key="start" value="3705"/>
+      <details key="end" value="4065"/>
+      <details key="line" value="103"/>
+    </eAnnotations>
+    <eAnnotations source="positions.116" references="/0/generateSliderMenuXMLs/%.7/%">
+      <details key="start" value="3791"/>
+      <details key="end" value="4058"/>
+      <details key="line" value="104"/>
+    </eAnnotations>
+    <eAnnotations source="positions.117" references="/0/generateSliderMenuXMLs/%.7/%.1">
+      <details key="start" value="3712"/>
+      <details key="end" value="3780"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.118" references="/0/generateSliderMenuXMLs/%.7/%.1/%">
+      <details key="start" value="3712"/>
+      <details key="end" value="3727"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.119" references="/0/generateSliderMenuXMLs/%.7/%.1/%.1">
+      <details key="start" value="3735"/>
+      <details key="end" value="3779"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.120" references="/0/generateSliderMenuXMLs/%.7/%.1/%.1/%">
+      <details key="start" value="3735"/>
+      <details key="end" value="3764"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.121" references="/0/generateSliderMenuXMLs/%.7/%.1/%.1/%.1">
+      <details key="start" value="3772"/>
+      <details key="end" value="3778"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.122" references="/0/generateSliderMenuXMLs/%.8">
+      <details key="start" value="4068"/>
+      <details key="end" value="4070"/>
+      <details key="line" value="111"/>
+    </eAnnotations>
+    <eAnnotations source="positions.123" references="/0/generateSliderMenuXMLs/%.9">
+      <details key="start" value="4070"/>
+      <details key="end" value="4575"/>
+      <details key="line" value="113"/>
+    </eAnnotations>
+    <eAnnotations source="positions.124" references="/0/generateSliderMenuXMLs/%.9/%">
+      <details key="start" value="4149"/>
+      <details key="end" value="4568"/>
+      <details key="line" value="114"/>
+    </eAnnotations>
+    <eAnnotations source="positions.125" references="/0/generateSliderMenuXMLs/%.9/%.1">
+      <details key="start" value="4077"/>
+      <details key="end" value="4138"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.126" references="/0/generateSliderMenuXMLs/%.9/%.1/%">
+      <details key="start" value="4077"/>
+      <details key="end" value="4092"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.127" references="/0/generateSliderMenuXMLs/%.9/%.1/%.1">
+      <details key="start" value="4100"/>
+      <details key="end" value="4137"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.128" references="/0/generateSliderMenuXMLs/%.9/%.1/%.1/%">
+      <details key="start" value="4100"/>
+      <details key="end" value="4122"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.129" references="/0/generateSliderMenuXMLs/%.9/%.1/%.1/%.1">
+      <details key="start" value="4130"/>
+      <details key="end" value="4136"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.130" references="/0/generateSliderMenuXMLs/aClass">
+      <details key="start" value="1248"/>
+      <details key="end" value="1262"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.131" references="/0/generateWebpageXML">
+      <details key="start" value="4601"/>
+      <details key="end" value="4983"/>
+      <details key="line" value="129"/>
+    </eAnnotations>
+    <eAnnotations source="positions.132" references="/0/generateWebpageXML/%">
+      <details key="start" value="4655"/>
+      <details key="end" value="4970"/>
+      <details key="line" value="130"/>
+    </eAnnotations>
+    <eAnnotations source="positions.133" references="/0/generateWebpageXML/aClass">
+      <details key="start" value="4637"/>
+      <details key="end" value="4651"/>
+      <details key="line" value="129"/>
+    </eAnnotations>
+    <eAnnotations source="positions.134" references="/0/generatePhotoGalleryViewXML">
+      <details key="start" value="4987"/>
+      <details key="end" value="5828"/>
+      <details key="line" value="142"/>
+    </eAnnotations>
+    <eAnnotations source="positions.135" references="/0/generatePhotoGalleryViewXML/%">
+      <details key="start" value="5050"/>
+      <details key="end" value="5815"/>
+      <details key="line" value="143"/>
+    </eAnnotations>
+    <eAnnotations source="positions.136" references="/0/generatePhotoGalleryViewXML/aClass">
+      <details key="start" value="5032"/>
+      <details key="end" value="5046"/>
+      <details key="line" value="142"/>
+    </eAnnotations>
+    <eAnnotations source="positions.137" references="/0/generateMapListSwitcherViewXML">
+      <details key="start" value="5832"/>
+      <details key="end" value="7553"/>
+      <details key="line" value="168"/>
+    </eAnnotations>
+    <eAnnotations source="positions.138" references="/0/generateMapListSwitcherViewXML/%">
+      <details key="start" value="5898"/>
+      <details key="end" value="7540"/>
+      <details key="line" value="169"/>
+    </eAnnotations>
+    <eAnnotations source="positions.139" references="/0/generateMapListSwitcherViewXML/aClass">
+      <details key="start" value="5880"/>
+      <details key="end" value="5894"/>
+      <details key="line" value="168"/>
+    </eAnnotations>
+    <eAnnotations source="positions.140" references="/0/generateEmptyXML">
+      <details key="start" value="7559"/>
+      <details key="end" value="7805"/>
+      <details key="line" value="225"/>
+    </eAnnotations>
+    <eAnnotations source="positions.141" references="/0/generateEmptyXML/%">
+      <details key="start" value="7611"/>
+      <details key="end" value="7792"/>
+      <details key="line" value="226"/>
+    </eAnnotations>
+    <eAnnotations source="positions.142" references="/0/generateEmptyXML/aClass">
+      <details key="start" value="7593"/>
+      <details key="end" value="7607"/>
+      <details key="line" value="225"/>
+    </eAnnotations>
+    <eAnnotations source="positions.143" references="/0/generateMainActivityXML">
+      <details key="start" value="7811"/>
+      <details key="end" value="8971"/>
+      <details key="line" value="235"/>
+    </eAnnotations>
+    <eAnnotations source="positions.144" references="/0/generateMainActivityXML/%">
+      <details key="start" value="7870"/>
+      <details key="end" value="7872"/>
+      <details key="line" value="236"/>
+    </eAnnotations>
+    <eAnnotations source="positions.145" references="/0/generateMainActivityXML/%.1">
+      <details key="start" value="7873"/>
+      <details key="end" value="8952"/>
+      <details key="line" value="237"/>
+    </eAnnotations>
+    <eAnnotations source="positions.146" references="/0/generateMainActivityXML/%.1/%">
+      <details key="start" value="7947"/>
+      <details key="end" value="8944"/>
+      <details key="line" value="238"/>
+    </eAnnotations>
+    <eAnnotations source="positions.147" references="/0/generateMainActivityXML/%.1/%.1">
+      <details key="start" value="7880"/>
+      <details key="end" value="7936"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.148" references="/0/generateMainActivityXML/%.1/%.1/%">
+      <details key="start" value="7880"/>
+      <details key="end" value="7895"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.149" references="/0/generateMainActivityXML/%.1/%.1/%.1">
+      <details key="start" value="7903"/>
+      <details key="end" value="7935"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.150" references="/0/generateMainActivityXML/%.1/%.1/%.1/%">
+      <details key="start" value="7903"/>
+      <details key="end" value="7920"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.151" references="/0/generateMainActivityXML/%.1/%.1/%.1/%.1">
+      <details key="start" value="7928"/>
+      <details key="end" value="7934"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.152" references="/0/generateMainActivityXML/%.2">
+      <details key="start" value="8955"/>
+      <details key="end" value="8958"/>
+      <details key="line" value="265"/>
+    </eAnnotations>
+    <eAnnotations source="positions.153" references="/0/generateMainActivityXML/aClass">
+      <details key="start" value="7852"/>
+      <details key="end" value="7866"/>
+      <details key="line" value="235"/>
+    </eAnnotations>
+    <eAnnotations source="positions.154" references="/0/generatePoiListItemXML">
+      <details key="start" value="8975"/>
+      <details key="end" value="11304"/>
+      <details key="line" value="270"/>
+    </eAnnotations>
+    <eAnnotations source="positions.155" references="/0/generatePoiListItemXML/%">
+      <details key="start" value="9034"/>
+      <details key="end" value="11291"/>
+      <details key="line" value="271"/>
+    </eAnnotations>
+    <eAnnotations source="positions.156" references="/0/generatePoiListItemXML/%/%">
+      <details key="start" value="9108"/>
+      <details key="end" value="11283"/>
+      <details key="line" value="272"/>
+    </eAnnotations>
+    <eAnnotations source="positions.157" references="/0/generatePoiListItemXML/%/%.1">
+      <details key="start" value="9041"/>
+      <details key="end" value="9097"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.158" references="/0/generatePoiListItemXML/%/%.1/%">
+      <details key="start" value="9041"/>
+      <details key="end" value="9056"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.159" references="/0/generatePoiListItemXML/%/%.1/%.1">
+      <details key="start" value="9064"/>
+      <details key="end" value="9096"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.160" references="/0/generatePoiListItemXML/%/%.1/%.1/%">
+      <details key="start" value="9064"/>
+      <details key="end" value="9081"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.161" references="/0/generatePoiListItemXML/%/%.1/%.1/%.1">
+      <details key="start" value="9089"/>
+      <details key="end" value="9095"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.162" references="/0/generatePoiListItemXML/aClass">
+      <details key="start" value="9015"/>
+      <details key="end" value="9029"/>
+      <details key="line" value="270"/>
+    </eAnnotations>
+    <eAnnotations source="positions.163" references="/0/isSpecificMenu">
+      <details key="start" value="11322"/>
+      <details key="end" value="11497"/>
+      <details key="line" value="348"/>
+    </eAnnotations>
+    <eAnnotations source="positions.164" references="/0/isSpecificMenu/aClass">
+      <details key="start" value="11351"/>
+      <details key="end" value="11365"/>
+      <details key="line" value="348"/>
+    </eAnnotations>
+    <eAnnotations source="positions.165" references="/0/isSpecificMenu/s">
+      <details key="start" value="11367"/>
+      <details key="end" value="11381"/>
+      <details key="line" value="348"/>
+    </eAnnotations>
+    <eAnnotations source="positions.166" references="/0/isSpecificMenu/str">
+      <details key="start" value="11383"/>
+      <details key="end" value="11395"/>
+      <details key="line" value="348"/>
+    </eAnnotations>
+    <eAnnotations source="positions.167" references="/0/isSpecificMenu/%">
+      <details key="start" value="11408"/>
+      <details key="end" value="11495"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.168" references="/0/isSpecificMenu/%/%">
+      <details key="start" value="11408"/>
+      <details key="end" value="11473"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.169" references="/0/isSpecificMenu/%/%/%">
+      <details key="start" value="11408"/>
+      <details key="end" value="11468"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.170" references="/0/isSpecificMenu/%/%/%/%">
+      <details key="start" value="11408"/>
+      <details key="end" value="11438"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.171" references="/0/isSpecificMenu/%/%/%/%/aClass">
+      <details key="start" value="11408"/>
+      <details key="end" value="11414"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.172" references="/0/isSpecificMenu/%/%/%/%/s">
+      <details key="start" value="11424"/>
+      <details key="end" value="11425"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.173" references="/0/isSpecificMenu/%/%/%/%/%">
+      <details key="start" value="11427"/>
+      <details key="end" value="11437"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.174" references="/0/isSpecificMenu/%/%/%/%.1">
+      <details key="start" value="11449"/>
+      <details key="end" value="11467"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.175" references="/0/isSpecificMenu/%/str">
+      <details key="start" value="11491"/>
+      <details key="end" value="11494"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

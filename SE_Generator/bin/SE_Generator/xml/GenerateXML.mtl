@@ -1,0 +1,348 @@
+[comment encoding = UTF-8 /]
+[module GenerateXML('http://www.eclipse.org/uml2/4.0.0/UML')/]
+
+[template public generateXML(aClass : Class, s : Stereotype)]
+
+	[if (aClass.name = 'MainActivity')]
+		[generateMainActivityXML(aClass)/]
+		[if (isSpecificMenu(aClass, s, 'SliderMenu'))]
+			[generateSliderMenuXMLs(aClass)/]
+		[/if]
+	[else]
+		[file (('res/layout/').concat('fragment_').concat(aClass.name.toLowerCase()).concat('.xml'), false)]
+<?xml version="1.0" encoding="utf-8"?>
+
+		[for (s:Stereotype | aClass.getAppliedStereotypes())]
+			[if s.name.equalsIgnoreCase('photoGalleryView')]
+[generatePhotoGalleryViewXML(aClass)/]
+			[/if]
+			[if s.name.equalsIgnoreCase('webpageView')]
+[generateWebpageXML(aClass)/]
+			[/if]
+			[if s.name.equalsIgnoreCase('mapListSwitcherView')]
+[generateMapListSwitcherViewXML(aClass)/]
+[generatePoiListItemXML(aClass)/]
+			[/if]
+			[if s.name.equalsIgnoreCase('customScreen')]
+[generateEmptyXML(aClass)/]
+			[/if]
+		[/for]
+
+		[/file]	
+
+	[/if]
+
+[/template]
+
+[query public isSpecificColorTheme(aClass : Class, s : Stereotype, str : String): Boolean = aClass.getValue(s, 'colorTheme').oclAsType(EnumerationLiteral).name.equalsIgnoreCase(str)/]
+
+[template public generateSliderMenuXMLs(aClass : Class)]
+
+[file (('res/layout/').concat(('menu_drawer_list_item').concat('.xml')), false)]
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@layout/menu_list_selector">
+ 
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:src="@drawable/ic_action_place"
+        android:layout_centerVertical="true" />
+ 
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/icon"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:textColor="@color/list_item_title"
+        android:gravity="center_vertical"
+        android:paddingRight="40dp"/>
+     
+    <TextView android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@layout/menu_counter_bg"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/counter_text_color"/>
+ 
+</RelativeLayout>
+[/file]	
+
+[file (('res/layout/').concat(('menu_counter_bg').concat('.xml')), false)]
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+ 
+    <item android:drawable="@layout/menu_list_item_bg_normal" android:state_activated="false"/>
+    <item android:drawable="@layout/menu_list_item_bg_pressed" android:state_pressed="true"/>
+    <item android:drawable="@layout/menu_list_item_bg_pressed" android:state_activated="true"/>
+ 
+</selector>
+[/file]	
+
+[file (('res/layout/').concat(('menu_list_item_bg_normal').concat('.xml')), false)]
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+  <gradient
+      android:startColor="@color/list_background"
+      android:endColor="@color/list_background"
+      android:angle="90" />
+</shape>
+
+[/file]	
+
+[file (('res/layout/').concat(('menu_list_item_bg_pressed').concat('.xml')), false)]
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+  <gradient
+      android:startColor="@color/list_background_pressed"
+      android:endColor="@color/list_background_pressed"
+      android:angle="90" />
+</shape>
+[/file]	
+
+[file (('res/layout/').concat(('menu_list_selector').concat('.xml')), false)]
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+ 
+    <item android:drawable="@layout/menu_list_item_bg_normal" android:state_activated="false"/>
+    <item android:drawable="@layout/menu_list_item_bg_pressed" android:state_pressed="true"/>
+    <item android:drawable="@layout/menu_list_item_bg_pressed" android:state_activated="true"/>
+ 
+</selector>
+[/file]	
+[/template]
+
+
+
+
+
+[template public generateWebpageXML(aClass : Class)]
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+     
+<WebView android:id="@+id/webView"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent" />
+ 
+</RelativeLayout>
+[/template]
+
+[template public generatePhotoGalleryViewXML(aClass : Class)]
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/list_background_pressed">
+
+ 
+    <Gallery
+        android:id="@+id/gallery1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+   
+     <ImageView
+        android:id="@+id/imageView1"
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/gallery_sydney" />
+
+ </LinearLayout>
+[/template]
+
+[template public generateMapListSwitcherViewXML(aClass : Class)]
+
+<ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ViewSwitcher"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <RelativeLayout
+	android:background="@color/list_background_pressed"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"  >
+          
+	 	<ImageButton
+            android:src="@drawable/btn_list_view"
+    	    android:id="@+id/Next"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_alignParentRight="true"
+    	    android:layout_alignParentBottom="true"
+    	    android:background="@null"/>
+    
+    </RelativeLayout>
+ 
+    <RelativeLayout
+	android:background="@color/list_background_pressed"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" >
+    
+	<LinearLayout
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+
+	</LinearLayout>
+    
+	<ImageButton 
+            android:src="@drawable/btn_map_view"
+            android:id="@+id/Previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+    	    android:layout_alignParentRight="true"
+    	    android:layout_alignParentBottom="true"
+    	    android:background="@null"/>
+    
+    </RelativeLayout>
+ 
+</ViewSwitcher>
+[/template]
+
+
+[template public generateEmptyXML(aClass : Class)]
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</RelativeLayout>
+[/template]
+
+
+[template public generateMainActivityXML(aClass : Class)]
+
+	[file (('res/layout/').concat(('activity_main').concat('.xml')), false)]
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+ 
+    <!-- Framelayout to display Fragments -->
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+ 
+    <!-- Listview to display slider menu -->
+    <ListView
+        android:id="@+id/list_slidermenu"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@color/list_divider"
+        android:dividerHeight="1dp"       
+        android:listSelector="@layout/menu_list_selector"
+        android:background="@color/list_background"/>
+</android.support.v4.widget.DrawerLayout>
+
+	[/file]	
+
+	
+[/template]
+
+[template public generatePoiListItemXML(aClass : Class)]
+	[file (('res/layout/').concat(('poi_list_item').concat('.xml')), false)]
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="0dip" >
+
+    <!-- ListRow Left side Thumbnail image -->
+<!--
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="10dip">
+
+        <ImageView
+            android:id="@+id/poi_image"
+            android:layout_width="100dip"
+            android:layout_height="80dip"/>
+    </LinearLayout>
+-->
+    <!-- Menu name -->
+
+    <TextView
+        android:id="@+id/poi_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:layout_marginLeft="10dip"
+        android:textColor="@color/list_item_title"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <!-- Description -->
+
+    <TextView
+        android:id="@+id/poi_description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/poi_name"
+        android:layout_marginTop="1dip"
+        android:layout_marginLeft="10dip"
+        android:textColor="@color/list_item_title"
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
+
+    <!-- Date -->
+
+    <TextView
+        android:id="@+id/poi_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_below="@id/poi_description"
+        android:layout_marginTop="1dip"
+        android:gravity="right"
+        android:textColor="@color/list_item_title"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        tools:ignore="SmallSp" />
+
+</RelativeLayout>
+	[/file]
+[/template]
+
+
+
+
+
+
+
+
+[query public isSpecificMenu(aClass : Class, s : Stereotype, str : String): Boolean = aClass.getValue(s, 'menuType').oclAsType(EnumerationLiteral).name.equalsIgnoreCase(str)/]
